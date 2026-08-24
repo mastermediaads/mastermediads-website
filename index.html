@@ -12,7 +12,7 @@
     <meta property="og:description" content="وكالتك الرائدة في التسويق الرقمي وإدارة الحملات الإعلانية وصناعة المحتوى الإبداعي.">
     <meta property="og:type" content="website">
     
-    <!-- Google Fonts: Cairo & Tajawal -->
+    <!-- Google Fonts: Cairo, Tajawal & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -21,23 +21,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            50: '#fff7ed',
-                            100: '#ffedd5',
-                            200: '#fed7aa',
-                            300: '#fdba74',
-                            400: '#fb923c',
-                            500: '#f97316', // Primary Orange / Flame
-                            600: '#ea580c',
-                            700: '#c2410c',
-                            accent: '#6366f1', // Indigo Accent
-                            dark: '#0B0F19',
-                            card: '#111827',
-                            border: '#1f2937'
+                        cyan: {
+                            50: '#ecfeff',
+                            100: '#cffafe',
+                            200: '#a5f3fc',
+                            300: '#67e8f9',
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                            700: '#0e7490',
+                            800: '#155e75',
+                            900: '#164e63',
+                        },
+                        yellow: {
+                            50: '#fefce8',
+                            100: '#fef9c3',
+                            200: '#fef08a',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
                         }
                     },
                     fontFamily: {
@@ -54,50 +60,52 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="bg-[#090D16] text-slate-100 font-sans antialiased selection:bg-orange-500 selection:text-white overflow-x-hidden">
+<body class="bg-[#F8FAFC] text-slate-800 font-sans antialiased selection:bg-cyan-500 selection:text-white overflow-x-hidden">
 
-    <!-- Top Glow Background Decor -->
-    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-tr from-orange-600/20 via-amber-500/10 to-indigo-600/20 blur-[130px] -z-10 pointer-events-none"></div>
+    <!-- Top Ambient Light Glow -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-gradient-to-tr from-cyan-400/20 via-yellow-300/15 to-teal-300/20 blur-[130px] -z-10 pointer-events-none"></div>
 
     <!-- Navigation Bar -->
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-[#090D16]/80 border-b border-slate-800/80" id="navbar">
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-white/90 border-b border-cyan-100 shadow-sm" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 
                 <!-- Logo -->
                 <a href="#home" class="flex items-center gap-3 group">
-                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-orange-600 via-amber-500 to-orange-400 flex items-center justify-center shadow-lg shadow-orange-500/25 group-hover:scale-105 transition-transform duration-300">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-cyan-600 via-cyan-500 to-teal-400 flex items-center justify-center shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform duration-300 ring-2 ring-yellow-400/80">
                         <i class="fa-solid fa-bolt text-white text-xl"></i>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-xl font-black tracking-tight text-white flex items-center gap-1.5 font-en">
-                            MASTER <span class="text-orange-500">MEDIA</span>
+                        <span class="text-xl font-black tracking-tight text-slate-900 flex items-center gap-1.5 font-en">
+                            MASTER <span class="text-cyan-600">MEDIA</span>
                         </span>
-                        <span class="text-[10px] tracking-widest text-slate-400 uppercase font-semibold">ADS & MARKETING</span>
+                        <span class="text-[10px] tracking-widest text-slate-500 uppercase font-bold flex items-center gap-1">
+                            ADS & MARKETING <span class="w-1.5 h-1.5 rounded-full bg-yellow-400 inline-block"></span>
+                        </span>
                     </div>
                 </a>
 
                 <!-- Desktop Menu -->
-                <nav class="hidden md:flex items-center gap-1 bg-slate-900/60 p-1.5 rounded-full border border-slate-800">
-                    <a href="#home" class="nav-link active px-4 py-2 text-sm font-medium rounded-full text-white hover:text-orange-400 hover:bg-slate-800/60 transition">الرئيسية</a>
-                    <a href="#services" class="nav-link px-4 py-2 text-sm font-medium rounded-full text-slate-300 hover:text-orange-400 hover:bg-slate-800/60 transition">خدماتنا</a>
-                    <a href="#calculator" class="nav-link px-4 py-2 text-sm font-medium rounded-full text-slate-300 hover:text-orange-400 hover:bg-slate-800/60 transition">حاسبة الحملات</a>
-                    <a href="#portfolio" class="nav-link px-4 py-2 text-sm font-medium rounded-full text-slate-300 hover:text-orange-400 hover:bg-slate-800/60 transition">أعمالنا</a>
-                    <a href="#packages" class="nav-link px-4 py-2 text-sm font-medium rounded-full text-slate-300 hover:text-orange-400 hover:bg-slate-800/60 transition">الباقات</a>
-                    <a href="#contact" class="nav-link px-4 py-2 text-sm font-medium rounded-full text-slate-300 hover:text-orange-400 hover:bg-slate-800/60 transition">تواصل معنا</a>
+                <nav class="hidden md:flex items-center gap-1 bg-slate-100/90 p-1.5 rounded-full border border-cyan-200/60 shadow-inner">
+                    <a href="#home" class="nav-link active px-4 py-2 text-sm font-semibold rounded-full text-cyan-700 bg-white shadow-sm transition">الرئيسية</a>
+                    <a href="#services" class="nav-link px-4 py-2 text-sm font-medium rounded-full text-slate-600 hover:text-cyan-600 hover:bg-white/80 transition">خدماتنا</a>
+                    <a href="#calculator" class="nav-link px-4 py-2 text-sm font-medium rounded-full text-slate-600 hover:text-cyan-600 hover:bg-white/80 transition">حاسبة الحملات</a>
+                    <a href="#portfolio" class="nav-link px-4 py-2 text-sm font-medium rounded-full text-slate-600 hover:text-cyan-600 hover:bg-white/80 transition">أعمالنا</a>
+                    <a href="#packages" class="nav-link px-4 py-2 text-sm font-medium rounded-full text-slate-600 hover:text-cyan-600 hover:bg-white/80 transition">الباقات</a>
+                    <a href="#contact" class="nav-link px-4 py-2 text-sm font-medium rounded-full text-slate-600 hover:text-cyan-600 hover:bg-white/80 transition">تواصل معنا</a>
                 </nav>
 
                 <!-- Action CTA -->
                 <div class="hidden lg:flex items-center gap-3">
-                    <a href="https://wa.me/966500000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D9%85%D8%A7%D8%B3%D8%AA%D8%B1%20%D9%85%D9%8A%D8%AF%D9%8A%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D9%8A%D8%A9" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white text-sm font-bold shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 hover:scale-[1.02] active:scale-[0.98] transition">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <a href="https://wa.me/9647770836888?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D9%85%D8%A7%D8%B3%D8%AA%D8%B1%20%D9%85%D9%8A%D8%AF%D9%8A%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D9%8A%D8%A9" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-600 via-cyan-500 to-teal-500 text-white text-sm font-bold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition border-b-2 border-yellow-400">
+                        <i class="fa-brands fa-whatsapp text-lg text-yellow-300"></i>
                         <span>ابدأ مشروعك الآن</span>
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="flex md:hidden items-center gap-2">
-                    <button id="mobileMenuBtn" aria-label="Toggle Menu" class="p-2.5 rounded-xl bg-slate-800 text-slate-200 hover:text-white focus:outline-none">
+                    <button id="mobileMenuBtn" aria-label="Toggle Menu" class="p-2.5 rounded-xl bg-slate-100 text-slate-700 hover:text-cyan-600 focus:outline-none border border-cyan-200">
                         <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
                     </button>
                 </div>
@@ -105,16 +113,16 @@
         </div>
 
         <!-- Mobile Dropdown -->
-        <div id="mobileMenu" class="hidden md:hidden px-4 pt-2 pb-6 bg-[#0B101D]/95 border-b border-slate-800 backdrop-blur-xl transition-all duration-300">
+        <div id="mobileMenu" class="hidden md:hidden px-4 pt-2 pb-6 bg-white/95 border-b border-cyan-100 backdrop-blur-xl transition-all duration-300 shadow-xl">
             <div class="flex flex-col space-y-2">
-                <a href="#home" class="mobile-nav-link px-4 py-3 rounded-lg text-white hover:bg-slate-800/80 font-medium">الرئيسية</a>
-                <a href="#services" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:bg-slate-800/80 font-medium">خدماتنا</a>
-                <a href="#calculator" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:bg-slate-800/80 font-medium">حاسبة الحملات</a>
-                <a href="#portfolio" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:bg-slate-800/80 font-medium">أعمالنا وقصص النجاح</a>
-                <a href="#packages" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:bg-slate-800/80 font-medium">باقات الأسعار</a>
-                <a href="#contact" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:bg-slate-800/80 font-medium">تواصل معنا</a>
+                <a href="#home" class="mobile-nav-link px-4 py-3 rounded-lg text-cyan-700 bg-cyan-50 font-bold">الرئيسية</a>
+                <a href="#services" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-700 hover:bg-slate-100 font-medium">خدماتنا</a>
+                <a href="#calculator" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-700 hover:bg-slate-100 font-medium">حاسبة الحملات</a>
+                <a href="#portfolio" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-700 hover:bg-slate-100 font-medium">أعمالنا وقصص النجاح</a>
+                <a href="#packages" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-700 hover:bg-slate-100 font-medium">باقات الأسعار</a>
+                <a href="#contact" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-700 hover:bg-slate-100 font-medium">تواصل معنا</a>
                 <div class="pt-3">
-                    <a href="#contact" class="w-full text-center block py-3 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold shadow-lg shadow-orange-500/20">
+                    <a href="#contact" class="w-full text-center block py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-teal-500 text-white font-bold shadow-md shadow-cyan-500/20 border-b-2 border-yellow-400">
                         احجز استشارتك المجانية
                     </a>
                 </div>
@@ -130,50 +138,50 @@
                 <div class="text-center max-w-4xl mx-auto">
                     
                     <!-- Top Badge -->
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-orange-500/30 text-orange-400 text-xs md:text-sm font-semibold mb-6 shadow-inner animate-pulse">
-                        <span class="w-2 h-2 rounded-full bg-orange-500"></span>
-                        وكالة الإعلانات والتسويق الرقمي الأكثر نمواً وإبداعاً
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-50 border border-yellow-400 text-cyan-900 text-xs md:text-sm font-bold mb-6 shadow-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-400 animate-ping"></span>
+                        وكالة الإعلانات والتسويق الرقمي الأكثر ابتكاراً ونمواً
                     </div>
 
                     <!-- Main Headline -->
-                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-tight md:leading-[1.15] mb-6">
-                        نحوّل أفكارك إلى <span class="bg-gradient-to-r from-orange-400 via-amber-300 to-orange-500 bg-clip-text text-transparent">حملات إعلانية خارقة</span> تضاعف مبيعاتك
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-tight md:leading-[1.15] mb-6">
+                        نحوّل أفكارك إلى <span class="bg-gradient-to-r from-cyan-600 via-teal-500 to-cyan-500 bg-clip-text text-transparent underline decoration-yellow-400 decoration-wavy decoration-2">حملات إعلانية خارقة</span> تضاعف مبيعاتك
                     </h1>
 
                     <!-- Subtext -->
-                    <p class="text-lg sm:text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl mx-auto">
-                        في <strong class="text-white">ماستر ميديا للإعلانات</strong>، ندمج التحليل البياني الدقيق مع الإنتاج الإبداعي المبهر لندير حملاتك على منصات التواصل ومحركات البحث بأعلى كفاءة وأقوى عائد استثماري (ROI).
+                    <p class="text-lg sm:text-xl text-slate-600 leading-relaxed mb-10 max-w-2xl mx-auto">
+                        في <strong class="text-slate-900 font-extrabold">ماستر ميديا للإعلانات</strong>، ندمج التحليل البياني الدقيق مع الإنتاج الإبداعي المبهر لندير حملاتك على منصات التواصل ومحركات البحث بأعلى كفاءة وأقوى عائد استثماري (ROI).
                     </p>
 
                     <!-- CTAs -->
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 text-white text-base font-bold shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5 active:translate-y-0 transition flex items-center justify-center gap-3 group">
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-cyan-600 via-cyan-500 to-teal-500 text-white text-base font-bold shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 active:translate-y-0 transition flex items-center justify-center gap-3 border-b-4 border-yellow-400 group">
                             <span>ابدأ حملتك الإعلانية الآن</span>
-                            <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+                            <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform text-yellow-300"></i>
                         </a>
-                        <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-slate-200 hover:text-white text-base font-semibold transition flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-calculator text-orange-400"></i>
+                        <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white hover:bg-slate-50 border-2 border-cyan-200 hover:border-yellow-400 text-slate-700 hover:text-cyan-700 text-base font-bold transition flex items-center justify-center gap-2 shadow-sm">
+                            <i class="fa-solid fa-calculator text-cyan-600"></i>
                             <span>احسب ميزانيتك المتوقعة</span>
                         </a>
                     </div>
 
                     <!-- Stats Counter Grid -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-8 border-t border-slate-800/80">
-                        <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800/60 backdrop-blur-sm">
-                            <div class="text-3xl md:text-4xl font-extrabold text-orange-400 mb-1">+<span class="counter" data-target="250">250</span>M</div>
-                            <div class="text-xs md:text-sm text-slate-400 font-medium">مشاهدة وظهور إعلاني</div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-8 border-t border-cyan-100">
+                        <div class="p-5 rounded-2xl bg-white border border-cyan-100 shadow-md hover:border-yellow-400 transition-all duration-300">
+                            <div class="text-3xl md:text-4xl font-black text-cyan-600 mb-1">+<span class="counter" data-target="250">250</span>M</div>
+                            <div class="text-xs md:text-sm text-slate-500 font-semibold">مشاهدة وظهور إعلاني</div>
                         </div>
-                        <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800/60 backdrop-blur-sm">
-                            <div class="text-3xl md:text-4xl font-extrabold text-amber-400 mb-1">+<span class="counter" data-target="380">380</span>%</div>
-                            <div class="text-xs md:text-sm text-slate-400 font-medium">متوسط زيادة المبيعات (ROI)</div>
+                        <div class="p-5 rounded-2xl bg-white border border-cyan-100 shadow-md hover:border-yellow-400 transition-all duration-300">
+                            <div class="text-3xl md:text-4xl font-black text-yellow-500 mb-1">+<span class="counter" data-target="380">380</span>%</div>
+                            <div class="text-xs md:text-sm text-slate-500 font-semibold">متوسط زيادة المبيعات (ROI)</div>
                         </div>
-                        <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800/60 backdrop-blur-sm">
-                            <div class="text-3xl md:text-4xl font-extrabold text-orange-400 mb-1">+<span class="counter" data-target="500">500</span>+</div>
-                            <div class="text-xs md:text-sm text-slate-400 font-medium">حملة إعلانية ناجحة</div>
+                        <div class="p-5 rounded-2xl bg-white border border-cyan-100 shadow-md hover:border-yellow-400 transition-all duration-300">
+                            <div class="text-3xl md:text-4xl font-black text-cyan-600 mb-1">+<span class="counter" data-target="500">500</span>+</div>
+                            <div class="text-xs md:text-sm text-slate-500 font-semibold">حملة إعلانية ناجحة</div>
                         </div>
-                        <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800/60 backdrop-blur-sm">
-                            <div class="text-3xl md:text-4xl font-extrabold text-amber-400 mb-1">99.4%</div>
-                            <div class="text-xs md:text-sm text-slate-400 font-medium">نسبة رضا وثقة العملاء</div>
+                        <div class="p-5 rounded-2xl bg-white border border-cyan-100 shadow-md hover:border-yellow-400 transition-all duration-300">
+                            <div class="text-3xl md:text-4xl font-black text-yellow-500 mb-1">99.4%</div>
+                            <div class="text-xs md:text-sm text-slate-500 font-semibold">نسبة رضا وثقة العملاء</div>
                         </div>
                     </div>
 
@@ -182,111 +190,111 @@
             
             <!-- Platform Logos Floating Bar -->
             <div class="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p class="text-center text-xs tracking-widest text-slate-500 uppercase font-semibold mb-6">نحن شركاء معتمدون وخبراء في إدارة إعلانات كبرى المنصات العالمية</p>
-                <div class="flex flex-wrap items-center justify-center gap-8 md:gap-14 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-                    <div class="flex items-center gap-2 text-slate-300 font-semibold hover:text-[#1877F2] transition"><i class="fa-brands fa-facebook text-2xl"></i> Meta Ads</div>
-                    <div class="flex items-center gap-2 text-slate-300 font-semibold hover:text-[#E4405F] transition"><i class="fa-brands fa-instagram text-2xl"></i> Instagram</div>
-                    <div class="flex items-center gap-2 text-slate-300 font-semibold hover:text-white hover:bg-black/50 hover:px-2 rounded transition"><i class="fa-brands fa-tiktok text-2xl"></i> TikTok Ads</div>
-                    <div class="flex items-center gap-2 text-slate-300 font-semibold hover:text-[#FFFC00] transition"><i class="fa-brands fa-snapchat text-2xl"></i> Snapchat Ads</div>
-                    <div class="flex items-center gap-2 text-slate-300 font-semibold hover:text-[#4285F4] transition"><i class="fa-brands fa-google text-2xl"></i> Google Ads</div>
-                    <div class="flex items-center gap-2 text-slate-300 font-semibold hover:text-[#FF0000] transition"><i class="fa-brands fa-youtube text-2xl"></i> YouTube Ads</div>
+                <p class="text-center text-xs tracking-widest text-slate-400 uppercase font-bold mb-6">شركاء معتمدون وخبراء في إدارة إعلانات كبرى المنصات العالمية</p>
+                <div class="flex flex-wrap items-center justify-center gap-8 md:gap-14 bg-white/80 p-6 rounded-2xl border border-cyan-100 shadow-sm">
+                    <div class="flex items-center gap-2 text-slate-600 font-bold hover:text-[#1877F2] transition"><i class="fa-brands fa-facebook text-2xl text-[#1877F2]"></i> Meta Ads</div>
+                    <div class="flex items-center gap-2 text-slate-600 font-bold hover:text-[#E4405F] transition"><i class="fa-brands fa-instagram text-2xl text-[#E4405F]"></i> Instagram</div>
+                    <div class="flex items-center gap-2 text-slate-600 font-bold hover:text-black transition"><i class="fa-brands fa-tiktok text-2xl text-black"></i> TikTok Ads</div>
+                    <div class="flex items-center gap-2 text-slate-600 font-bold hover:text-amber-500 transition"><i class="fa-brands fa-snapchat text-2xl text-amber-400"></i> Snapchat Ads</div>
+                    <div class="flex items-center gap-2 text-slate-600 font-bold hover:text-[#4285F4] transition"><i class="fa-brands fa-google text-2xl text-[#4285F4]"></i> Google Ads</div>
+                    <div class="flex items-center gap-2 text-slate-600 font-bold hover:text-[#FF0000] transition"><i class="fa-brands fa-youtube text-2xl text-[#FF0000]"></i> YouTube Ads</div>
                 </div>
             </div>
         </section>
 
         <!-- SERVICES SECTION -->
-        <section id="services" class="py-20 bg-[#0B0F19] relative border-y border-slate-800/80">
+        <section id="services" class="py-20 bg-white relative border-y border-cyan-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-sm font-bold tracking-wider text-orange-400 uppercase mb-3">حلول تسويقية متكاملة</h2>
-                    <h3 class="text-3xl md:text-5xl font-black text-white mb-4">خدمات ماستر ميديا لصناعة الفارق</h3>
-                    <p class="text-slate-400 text-base md:text-lg">نقدم حزمة شاملة من الخدمات الرقمية والإعلانية المصممة خصيصاً لجذب عملائك المحتملين وتحويلهم إلى مشترين دائمين.</p>
+                    <span class="inline-block px-4 py-1 rounded-full bg-cyan-50 border border-yellow-400 text-cyan-800 text-xs font-bold uppercase mb-3">حلول تسويقية متكاملة</span>
+                    <h3 class="text-3xl md:text-5xl font-black text-slate-900 mb-4">خدمات ماستر ميديا لصناعة الفارق</h3>
+                    <p class="text-slate-600 text-base md:text-lg">نقدم حزمة شاملة من الخدمات الرقمية والإعلانية المصممة خصيصاً لجذب عملائك المحتملين وتحويلهم إلى مشترين دائمين.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
                     <!-- Service 1 -->
-                    <div class="service-card group p-8 rounded-3xl bg-slate-900/50 border border-slate-800/90 hover:border-orange-500/50 hover:bg-slate-900/80 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
-                        <div class="w-14 h-14 rounded-2xl bg-orange-500/10 border border-orange-500/20 text-orange-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                    <div class="service-card group p-8 rounded-3xl bg-[#F8FAFC] border-2 border-cyan-100 hover:border-yellow-400 hover:bg-white shadow-sm hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-50 border-2 border-cyan-200 text-cyan-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-yellow-400 transition-all duration-300 shadow-sm">
                             <i class="fa-solid fa-bullseye"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-white mb-3">الحملات الإعلانية الممولة (Paid Ads)</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6">إدارة واستهداف دقيق على Meta, TikTok, Snapchat, Google لتحقيق أقل تكلفة للنقرة والتحويل (CPA) وأعلى عائد إنفاق إعلاني (ROAS).</p>
-                        <ul class="space-y-2 text-xs text-slate-300 border-t border-slate-800/80 pt-4">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> استهداف عميق للجمهور المهتم</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> اختبار مستمر A/B Testing</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> تقارير أداء لحظية وتحليلات تفصيلية</li>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">الحملات الإعلانية الممولة (Paid Ads)</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">إدارة واستهداف دقيق على Meta, TikTok, Snapchat, Google لتحقيق أقل تكلفة للنقرة والتحويل (CPA) وأعلى عائد إنفاق إعلاني (ROAS).</p>
+                        <ul class="space-y-2 text-xs text-slate-700 border-t border-cyan-100 pt-4">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> استهداف عميق للجمهور المهتم</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> اختبار مستمر A/B Testing</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> تقارير أداء لحظية وتحليلات تفصيلية</li>
                         </ul>
                     </div>
 
                     <!-- Service 2 -->
-                    <div class="service-card group p-8 rounded-3xl bg-slate-900/50 border border-slate-800/90 hover:border-amber-500/50 hover:bg-slate-900/80 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
-                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+                    <div class="service-card group p-8 rounded-3xl bg-[#F8FAFC] border-2 border-cyan-100 hover:border-yellow-400 hover:bg-white shadow-sm hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                        <div class="w-14 h-14 rounded-2xl bg-yellow-50 border-2 border-yellow-200 text-yellow-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-yellow-400 group-hover:text-slate-900 group-hover:border-cyan-400 transition-all duration-300 shadow-sm">
                             <i class="fa-solid fa-video"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-white mb-3">الإنتاج الإعلامي والفيديو الإعلاني (UGC & Media)</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6">صناعة إعلانات فيديو تفاعلية، موشن جرافيكس، ريلز، وتيك توك تخطف الانتباه في أول 3 ثوانٍ وتقنع العميل بالشراء فوراً.</p>
-                        <ul class="space-y-2 text-xs text-slate-300 border-t border-slate-800/80 pt-4">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> كتابة سكربتات مقنعة (Copywriting)</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> تصوير ومونتاج احترافي بأحدث التقنيات</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> إنتاج محتوى UGC المؤثر</li>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">الإنتاج الإعلامي والفيديو الإعلاني (UGC & Media)</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">صناعة إعلانات فيديو تفاعلية، موشن جرافيكس، ريلز، وتيك توك تخطف الانتباه في أول 3 ثوانٍ وتقنع العميل بالشراء فوراً.</p>
+                        <ul class="space-y-2 text-xs text-slate-700 border-t border-cyan-100 pt-4">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500"></i> كتابة سكربتات مقنعة (Copywriting)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500"></i> تصوير ومونتاج احترافي بأحدث التقنيات</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500"></i> إنتاج محتوى UGC المؤثر</li>
                         </ul>
                     </div>
 
                     <!-- Service 3 -->
-                    <div class="service-card group p-8 rounded-3xl bg-slate-900/50 border border-slate-800/90 hover:border-orange-500/50 hover:bg-slate-900/80 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
-                        <div class="w-14 h-14 rounded-2xl bg-orange-500/10 border border-orange-500/20 text-orange-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                    <div class="service-card group p-8 rounded-3xl bg-[#F8FAFC] border-2 border-cyan-100 hover:border-yellow-400 hover:bg-white shadow-sm hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-50 border-2 border-cyan-200 text-cyan-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-yellow-400 transition-all duration-300 shadow-sm">
                             <i class="fa-solid fa-share-nodes"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-white mb-3">إدارة السوشيال ميديا وصناعة المحتوى</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6">بناء مجتمع وفيّ لعلامتك التجارية مع خطط نشر دورية، وتفاعل مستمر يرفع من قوة العلامة وتأثيرها بين المنافسين.</p>
-                        <ul class="space-y-2 text-xs text-slate-300 border-t border-slate-800/80 pt-4">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> تقويم نشر شهري متكامل ومدروس</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> الرد على الاستفسارات وإدارة المجتمع</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> مواكبة الترندات بذكاء</li>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">إدارة السوشيال ميديا وصناعة المحتوى</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">بناء مجتمع وفيّ لعلامتك التجارية مع خطط نشر دورية، وتفاعل مستمر يرفع من قوة العلامة وتأثيرها بين المنافسين.</p>
+                        <ul class="space-y-2 text-xs text-slate-700 border-t border-cyan-100 pt-4">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> تقويم نشر شهري متكامل ومدروس</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> الرد على الاستفسارات وإدارة المجتمع</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> مواكبة الترندات بذكاء</li>
                         </ul>
                     </div>
 
                     <!-- Service 4 -->
-                    <div class="service-card group p-8 rounded-3xl bg-slate-900/50 border border-slate-800/90 hover:border-amber-500/50 hover:bg-slate-900/80 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
-                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+                    <div class="service-card group p-8 rounded-3xl bg-[#F8FAFC] border-2 border-cyan-100 hover:border-yellow-400 hover:bg-white shadow-sm hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                        <div class="w-14 h-14 rounded-2xl bg-yellow-50 border-2 border-yellow-200 text-yellow-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-yellow-400 group-hover:text-slate-900 group-hover:border-cyan-400 transition-all duration-300 shadow-sm">
                             <i class="fa-solid fa-pen-nib"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-white mb-3">تصميم الهوية البصرية والعلامة التجارية</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6">ابتكار هوية بصرية كاملة تنبض بالاحترافية وتعبر عن قيم مشروعك وتجعله راسخاً في أذهان جمهورك المستهدف.</p>
-                        <ul class="space-y-2 text-xs text-slate-300 border-t border-slate-800/80 pt-4">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> تصميم الشعارات ودليل الهوية الكامل</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> تصاميم السوشيال ميديا والمطبوعات</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> تجربة مستخدم مبهرة وهوية متسقة</li>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">تصميم الهوية البصرية والعلامة التجارية</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">ابتكار هوية بصرية كاملة تنبض بالاحترافية وتعبر عن قيم مشروعك وتجعله راسخاً في أذهان جمهورك المستهدف.</p>
+                        <ul class="space-y-2 text-xs text-slate-700 border-t border-cyan-100 pt-4">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500"></i> تصميم الشعارات ودليل الهوية الكامل</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500"></i> تصاميم السوشيال ميديا والمطبوعات</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500"></i> تجربة مستخدم مبهرة وهوية متسقة</li>
                         </ul>
                     </div>
 
                     <!-- Service 5 -->
-                    <div class="service-card group p-8 rounded-3xl bg-slate-900/50 border border-slate-800/90 hover:border-orange-500/50 hover:bg-slate-900/80 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
-                        <div class="w-14 h-14 rounded-2xl bg-orange-500/10 border border-orange-500/20 text-orange-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                    <div class="service-card group p-8 rounded-3xl bg-[#F8FAFC] border-2 border-cyan-100 hover:border-yellow-400 hover:bg-white shadow-sm hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-50 border-2 border-cyan-200 text-cyan-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-yellow-400 transition-all duration-300 shadow-sm">
                             <i class="fa-solid fa-laptop-code"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-white mb-3">تطوير صفحات الهبوط والمتاجر وسيو (SEO)</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6">تصميم صفحات هبوط (Landing Pages) ذات معدل تحويل عالي جداً وتصدر نتائج البحث الأولى في محرك Google.</p>
-                        <ul class="space-y-2 text-xs text-slate-300 border-t border-slate-800/80 pt-4">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> سرعة فائقة وتوافق تام مع الجوال</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> تحسين السيو الداخلي والخارجي</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> ربط بكسلات التتبع (Pixels & CAPI)</li>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">تطوير صفحات الهبوط والمتاجر وسيو (SEO)</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">تصميم صفحات هبوط (Landing Pages) ذات معدل تحويل عالي جداً وتصدر نتائج البحث الأولى في محرك Google.</p>
+                        <ul class="space-y-2 text-xs text-slate-700 border-t border-cyan-100 pt-4">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> سرعة فائقة وتوافق تام مع الجوال</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> تحسين السيو الداخلي والخارجي</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> ربط بكسلات التتبع (Pixels & CAPI)</li>
                         </ul>
                     </div>
 
                     <!-- Service 6 -->
-                    <div class="service-card group p-8 rounded-3xl bg-slate-900/50 border border-slate-800/90 hover:border-amber-500/50 hover:bg-slate-900/80 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
-                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+                    <div class="service-card group p-8 rounded-3xl bg-[#F8FAFC] border-2 border-cyan-100 hover:border-yellow-400 hover:bg-white shadow-sm hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                        <div class="w-14 h-14 rounded-2xl bg-yellow-50 border-2 border-yellow-200 text-yellow-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-yellow-400 group-hover:text-slate-900 group-hover:border-cyan-400 transition-all duration-300 shadow-sm">
                             <i class="fa-solid fa-users-viewfinder"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-white mb-3">التسويق عبر المؤثرين والشراكات</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6">اختيار أفضل المؤثرين وصناع المحتوى المناسبين لجمهورك وإدارة الحملة من البداية حتى قياس المبيعات بدقة.</p>
-                        <ul class="space-y-2 text-xs text-slate-300 border-t border-slate-800/80 pt-4">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> شبكة واسعة من المؤثرين الموثوقين</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> إدارة العقود والأداء والتسليم</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> تتبع كود الخصم والروابط التابعة</li>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">التسويق عبر المؤثرين والشراكات</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">اختيار أفضل المؤثرين وصناع المحتوى المناسبين لجمهورك وإدارة الحملة من البداية حتى قياس المبيعات بدقة.</p>
+                        <ul class="space-y-2 text-xs text-slate-700 border-t border-cyan-100 pt-4">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500"></i> شبكة واسعة من المؤثرين الموثوقين</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500"></i> إدارة العقود والأداء والتسليم</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500"></i> تتبع كود الخصم والروابط التابعة</li>
                         </ul>
                     </div>
 
@@ -295,16 +303,20 @@
         </section>
 
         <!-- INTERACTIVE CAMPAIGN ROI CALCULATOR -->
-        <section id="calculator" class="py-20 relative overflow-hidden">
+        <section id="calculator" class="py-20 relative overflow-hidden bg-[#F0FDF4]/30">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-2xl mx-auto mb-12">
-                    <span class="px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-xs font-bold uppercase">حاسبة العائد التفاعلية</span>
-                    <h3 class="text-3xl md:text-4xl font-black text-white mt-3 mb-2">قدّر نتائج حملتك الإعلانية القادمة</h3>
-                    <p class="text-slate-400 text-sm">حدد الميزانية المقترحة والمنصة لترى التقديرات المتوقعة للظهور والنقرات والطلبات.</p>
+                    <span class="px-4 py-1.5 rounded-full bg-cyan-50 border border-yellow-400 text-cyan-800 text-xs font-bold uppercase">حاسبة العائد التفاعلية</span>
+                    <h3 class="text-3xl md:text-4xl font-black text-slate-900 mt-3 mb-2">قدّر نتائج حملتك الإعلانية القادمة</h3>
+                    <p class="text-slate-600 text-sm">حدد الميزانية المقترحة والمنصة لترى التقديرات المتوقعة للظهور والنقرات والطلبات.</p>
                 </div>
 
-                <div class="p-8 md:p-12 rounded-3xl bg-slate-900/70 border border-slate-800 shadow-2xl backdrop-blur-xl">
+                <div class="p-8 md:p-12 rounded-3xl bg-white border-2 border-cyan-200 shadow-xl relative">
+                    <!-- Accent Corner Border -->
+                    <div class="absolute top-0 right-0 w-24 h-24 border-t-4 border-r-4 border-yellow-400 rounded-tr-3xl pointer-events-none"></div>
+                    <div class="absolute bottom-0 left-0 w-24 h-24 border-b-4 border-l-4 border-cyan-400 rounded-bl-3xl pointer-events-none"></div>
+
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         
                         <!-- Inputs -->
@@ -313,11 +325,11 @@
                             <!-- Budget Slider -->
                             <div>
                                 <div class="flex justify-between items-center mb-2">
-                                    <label class="text-sm font-semibold text-slate-300">الميزانية الإعلانية المتوقعة (شهرياً):</label>
-                                    <span class="text-2xl font-black text-orange-400"><span id="budgetValue">1500</span> $</span>
+                                    <label class="text-sm font-bold text-slate-800">الميزانية الإعلانية المتوقعة (شهرياً):</label>
+                                    <span class="text-2xl font-black text-cyan-600 bg-cyan-50 px-3 py-1 rounded-lg border border-cyan-200"><span id="budgetValue">1500</span> $</span>
                                 </div>
-                                <input type="range" id="budgetRange" min="300" max="10000" step="100" value="1500" class="w-full h-3 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-orange-500">
-                                <div class="flex justify-between text-xs text-slate-500 mt-1">
+                                <input type="range" id="budgetRange" min="300" max="10000" step="100" value="1500" class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-600">
+                                <div class="flex justify-between text-xs text-slate-500 mt-1 font-semibold">
                                     <span>$300</span>
                                     <span>$5,000</span>
                                     <span>$10,000+</span>
@@ -326,18 +338,18 @@
 
                             <!-- Platform Selection -->
                             <div>
-                                <label class="text-sm font-semibold text-slate-300 block mb-2">المنصة المستهدفة:</label>
+                                <label class="text-sm font-bold text-slate-800 block mb-2">المنصة المستهدفة:</label>
                                 <div class="grid grid-cols-3 gap-2">
-                                    <button type="button" class="platform-btn active p-3 rounded-xl border border-orange-500/80 bg-orange-500/10 text-white font-medium text-xs sm:text-sm flex flex-col items-center gap-1.5 transition" data-cpc="0.25" data-ctr="2.8">
-                                        <i class="fa-brands fa-tiktok text-lg"></i>
+                                    <button type="button" class="platform-btn active p-3 rounded-xl border-2 border-cyan-500 bg-cyan-50 text-cyan-800 font-bold text-xs sm:text-sm flex flex-col items-center gap-1.5 transition shadow-sm" data-cpc="0.25" data-ctr="2.8">
+                                        <i class="fa-brands fa-tiktok text-lg text-slate-900"></i>
                                         <span>تيك توك (TikTok)</span>
                                     </button>
-                                    <button type="button" class="platform-btn p-3 rounded-xl border border-slate-800 bg-slate-800/40 text-slate-400 font-medium text-xs sm:text-sm flex flex-col items-center gap-1.5 hover:border-slate-700 transition" data-cpc="0.35" data-ctr="2.2">
-                                        <i class="fa-brands fa-instagram text-lg"></i>
+                                    <button type="button" class="platform-btn p-3 rounded-xl border-2 border-slate-200 bg-slate-50 text-slate-600 font-semibold text-xs sm:text-sm flex flex-col items-center gap-1.5 hover:border-yellow-400 transition" data-cpc="0.35" data-ctr="2.2">
+                                        <i class="fa-brands fa-instagram text-lg text-[#E4405F]"></i>
                                         <span>ميتا (Meta / IG)</span>
                                     </button>
-                                    <button type="button" class="platform-btn p-3 rounded-xl border border-slate-800 bg-slate-800/40 text-slate-400 font-medium text-xs sm:text-sm flex flex-col items-center gap-1.5 hover:border-slate-700 transition" data-cpc="0.45" data-ctr="3.5">
-                                        <i class="fa-brands fa-google text-lg"></i>
+                                    <button type="button" class="platform-btn p-3 rounded-xl border-2 border-slate-200 bg-slate-50 text-slate-600 font-semibold text-xs sm:text-sm flex flex-col items-center gap-1.5 hover:border-yellow-400 transition" data-cpc="0.45" data-ctr="3.5">
+                                        <i class="fa-brands fa-google text-lg text-[#4285F4]"></i>
                                         <span>جوجل (Google Ads)</span>
                                     </button>
                                 </div>
@@ -345,8 +357,8 @@
 
                             <!-- Goal Type -->
                             <div>
-                                <label class="text-sm font-semibold text-slate-300 block mb-2">الهدف الرئيسي:</label>
-                                <select id="campaignGoal" class="w-full bg-slate-800/90 border border-slate-700 text-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-500">
+                                <label class="text-sm font-bold text-slate-800 block mb-2">الهدف الرئيسي:</label>
+                                <select id="campaignGoal" class="w-full bg-slate-50 border-2 border-slate-200 text-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-500 font-medium">
                                     <option value="sales">زيادة المبيعات المباشرة للمتجر (E-commerce Sales)</option>
                                     <option value="leads">توليد العملاء المحتملين والمكالمات (Lead Generation)</option>
                                     <option value="reach">الانتشار والوعي بالعلامة التجارية (Brand Awareness)</option>
@@ -356,25 +368,28 @@
                         </div>
 
                         <!-- Results Box -->
-                        <div class="lg:col-span-5 p-6 rounded-2xl bg-gradient-to-br from-slate-900 to-[#141b2d] border border-orange-500/30 text-center relative overflow-hidden">
-                            <div class="text-xs uppercase tracking-wider text-orange-400 font-bold mb-4">النتائج التقديرية المتوقعة</div>
+                        <div class="lg:col-span-5 p-6 rounded-2xl bg-gradient-to-br from-cyan-900 via-cyan-800 to-slate-900 text-white text-center relative overflow-hidden shadow-lg border-2 border-yellow-400">
+                            <div class="text-xs uppercase tracking-wider text-yellow-300 font-black mb-4 flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-sparkles text-yellow-400"></i>
+                                <span>النتائج التقديرية المتوقعة</span>
+                            </div>
                             
-                            <div class="space-y-4 mb-6">
-                                <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/50">
-                                    <div class="text-xs text-slate-400">الوصول والظهور المتوقع (Impressions)</div>
+                            <div class="space-y-3 mb-6">
+                                <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/20">
+                                    <div class="text-xs text-cyan-200">الوصول والظهور المتوقع (Impressions)</div>
                                     <div class="text-2xl font-black text-white" id="estReach">350,000 - 600,000</div>
                                 </div>
-                                <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/50">
-                                    <div class="text-xs text-slate-400">النقرات المهتمة والزيارات (Clicks)</div>
-                                    <div class="text-2xl font-black text-amber-400" id="estClicks">4,200 - 6,800</div>
+                                <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/20">
+                                    <div class="text-xs text-cyan-200">النقرات والزيارات المستهدفة (Clicks)</div>
+                                    <div class="text-2xl font-black text-yellow-300" id="estClicks">4,200 - 6,800</div>
                                 </div>
-                                <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/50">
-                                    <div class="text-xs text-slate-400">المبيعات أو العملاء المحتملين المتوقعين</div>
-                                    <div class="text-2xl font-black text-orange-400" id="estConversions">120 - 240 عميل</div>
+                                <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/20">
+                                    <div class="text-xs text-cyan-200">الطلبات أو العملاء المحتملين المتوقعين</div>
+                                    <div class="text-2xl font-black text-cyan-300" id="estConversions">120 - 240 عميل</div>
                                 </div>
                             </div>
 
-                            <a href="#contact" class="w-full block py-3 px-4 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold text-sm shadow-lg shadow-orange-500/20 hover:scale-[1.02] transition">
+                            <a href="#contact" class="w-full block py-3 px-4 rounded-xl bg-gradient-to-r from-yellow-400 to-amber-400 text-slate-950 font-black text-sm shadow-md hover:scale-[1.02] transition border-b-2 border-amber-600">
                                 اطلب خطة الحملة المخصصة مجاناً
                             </a>
                         </div>
@@ -386,21 +401,21 @@
         </section>
 
         <!-- PORTFOLIO / CASE STUDIES -->
-        <section id="portfolio" class="py-20 bg-[#0B0F19] border-y border-slate-800/80">
+        <section id="portfolio" class="py-20 bg-white border-y border-cyan-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
                     <div>
-                        <span class="text-orange-400 font-bold text-sm uppercase">أعمالنا وقصص النجاح</span>
-                        <h3 class="text-3xl md:text-4xl font-black text-white mt-1">نتائج حقيقية لعلامات وثقت بنا</h3>
+                        <span class="inline-block px-3 py-1 rounded-full bg-cyan-50 border border-yellow-400 text-cyan-800 font-bold text-xs uppercase mb-2">أعمالنا وقصص النجاح</span>
+                        <h3 class="text-3xl md:text-4xl font-black text-slate-900">نتائج حقيقية لعلامات وثقت بنا</h3>
                     </div>
                     
                     <!-- Filter Buttons -->
                     <div class="flex flex-wrap gap-2 mt-4 md:mt-0">
-                        <button class="portfolio-filter active px-4 py-2 rounded-full text-xs font-bold bg-orange-500 text-white transition" data-filter="all">الكل</button>
-                        <button class="portfolio-filter px-4 py-2 rounded-full text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition" data-filter="ads">حملات ممولة</button>
-                        <button class="portfolio-filter px-4 py-2 rounded-full text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition" data-filter="video">فيديوهات وإنتاج</button>
-                        <button class="portfolio-filter px-4 py-2 rounded-full text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition" data-filter="branding">هويات وبناء متاجر</button>
+                        <button class="portfolio-filter active px-5 py-2 rounded-full text-xs font-bold bg-cyan-600 text-white shadow-sm border-b-2 border-yellow-400 transition" data-filter="all">الكل</button>
+                        <button class="portfolio-filter px-5 py-2 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:text-cyan-700 hover:border-yellow-400 border border-transparent transition" data-filter="ads">حملات ممولة</button>
+                        <button class="portfolio-filter px-5 py-2 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:text-cyan-700 hover:border-yellow-400 border border-transparent transition" data-filter="video">فيديوهات وإنتاج</button>
+                        <button class="portfolio-filter px-5 py-2 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:text-cyan-700 hover:border-yellow-400 border border-transparent transition" data-filter="branding">هويات وبناء متاجر</button>
                     </div>
                 </div>
 
@@ -408,59 +423,58 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolioContainer">
                     
                     <!-- Item 1 -->
-                    <div class="portfolio-item rounded-2xl overflow-hidden bg-slate-900/60 border border-slate-800 group hover:border-orange-500/50 transition" data-category="ads">
-                        <div class="h-48 bg-gradient-to-tr from-orange-950 via-slate-900 to-amber-900 flex items-center justify-center p-6 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-[radial-gradient(#f97316_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+                    <div class="portfolio-item rounded-3xl overflow-hidden bg-[#F8FAFC] border-2 border-cyan-100 hover:border-yellow-400 shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="ads">
+                        <div class="h-48 bg-gradient-to-tr from-cyan-800 via-cyan-700 to-teal-600 flex items-center justify-center p-6 relative overflow-hidden">
                             <div class="text-center z-10">
-                                <span class="text-4xl font-black text-orange-400">+410%</span>
-                                <p class="text-xs text-slate-300 font-semibold mt-1">نمو مبيعات متجر عطور وأزياء</p>
+                                <span class="text-4xl font-black text-yellow-300">+410%</span>
+                                <p class="text-xs text-white font-bold mt-1">نمو مبيعات متجر عطور وأزياء</p>
                             </div>
                         </div>
                         <div class="p-6">
-                            <div class="flex justify-between items-center text-xs text-orange-400 font-semibold mb-2">
+                            <div class="flex justify-between items-center text-xs text-cyan-700 font-bold mb-2">
                                 <span>حملة TikTok & Snapchat</span>
-                                <span class="bg-orange-500/10 px-2.5 py-1 rounded-full border border-orange-500/20">ROAS 4.8x</span>
+                                <span class="bg-yellow-100 text-yellow-800 px-2.5 py-1 rounded-full border border-yellow-300 font-extrabold">ROAS 4.8x</span>
                             </div>
-                            <h4 class="text-lg font-bold text-white mb-2">إطلاق متجر لافيلا للعطور الفاخرة</h4>
-                            <p class="text-slate-400 text-xs leading-relaxed">إدارة حملة متكاملة بالفيديو والمؤثرين حققت مبيعات قياسية في أول 30 يوم من التدشين.</p>
+                            <h4 class="text-lg font-bold text-slate-900 mb-2">إطلاق متجر لافيلا للعطور الفاخرة</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed">إدارة حملة متكاملة بالفيديو والمؤثرين حققت مبيعات قياسية في أول 30 يوم من التدشين.</p>
                         </div>
                     </div>
 
                     <!-- Item 2 -->
-                    <div class="portfolio-item rounded-2xl overflow-hidden bg-slate-900/60 border border-slate-800 group hover:border-orange-500/50 transition" data-category="video">
-                        <div class="h-48 bg-gradient-to-tr from-slate-900 via-indigo-950 to-slate-900 flex items-center justify-center p-6 relative overflow-hidden">
+                    <div class="portfolio-item rounded-3xl overflow-hidden bg-[#F8FAFC] border-2 border-cyan-100 hover:border-yellow-400 shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="video">
+                        <div class="h-48 bg-gradient-to-tr from-slate-900 via-cyan-900 to-teal-800 flex items-center justify-center p-6 relative overflow-hidden">
                             <div class="text-center z-10">
-                                <div class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center mx-auto mb-2 text-white text-xl">
-                                    <i class="fa-solid fa-play text-orange-400"></i>
+                                <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mx-auto mb-2 text-yellow-300 text-xl ring-2 ring-yellow-400">
+                                    <i class="fa-solid fa-play"></i>
                                 </div>
-                                <span class="text-xs text-slate-300 font-semibold">1.8M+ مشاهدة تفاعلية</span>
+                                <span class="text-xs text-cyan-100 font-bold">1.8M+ مشاهدة تفاعلية</span>
                             </div>
                         </div>
                         <div class="p-6">
-                            <div class="flex justify-between items-center text-xs text-amber-400 font-semibold mb-2">
+                            <div class="flex justify-between items-center text-xs text-cyan-700 font-bold mb-2">
                                 <span>إنتاج فيديو UGC إبداعي</span>
-                                <span class="bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">Viral Video</span>
+                                <span class="bg-cyan-100 text-cyan-800 px-2.5 py-1 rounded-full border border-cyan-300 font-extrabold">Viral Video</span>
                             </div>
-                            <h4 class="text-lg font-bold text-white mb-2">إعلانات تطبيق تقني ذكي</h4>
-                            <p class="text-slate-400 text-xs leading-relaxed">سلسلة مقاطع إعلانية سريعة أدت إلى أكثر من 45,000 عملية تحميل جديدة للتطبيق في أسبوعين.</p>
+                            <h4 class="text-lg font-bold text-slate-900 mb-2">إعلانات تطبيق تقني ذكي</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed">سلسلة مقاطع إعلانية سريعة أدت إلى أكثر من 45,000 عملية تحميل جديدة للتطبيق في أسبوعين.</p>
                         </div>
                     </div>
 
                     <!-- Item 3 -->
-                    <div class="portfolio-item rounded-2xl overflow-hidden bg-slate-900/60 border border-slate-800 group hover:border-orange-500/50 transition" data-category="branding">
-                        <div class="h-48 bg-gradient-to-tr from-amber-950 via-slate-900 to-orange-950 flex items-center justify-center p-6 relative overflow-hidden">
+                    <div class="portfolio-item rounded-3xl overflow-hidden bg-[#F8FAFC] border-2 border-cyan-100 hover:border-yellow-400 shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="branding">
+                        <div class="h-48 bg-gradient-to-tr from-cyan-900 via-teal-800 to-cyan-700 flex items-center justify-center p-6 relative overflow-hidden">
                             <div class="text-center z-10">
-                                <i class="fa-solid fa-gem text-4xl text-amber-400 mb-2"></i>
-                                <p class="text-xs text-slate-300 font-semibold">هوية بصرية + متجر سريع</p>
+                                <i class="fa-solid fa-gem text-4xl text-yellow-300 mb-2"></i>
+                                <p class="text-xs text-white font-bold">هوية بصرية + متجر سريع</p>
                             </div>
                         </div>
                         <div class="p-6">
-                            <div class="flex justify-between items-center text-xs text-orange-400 font-semibold mb-2">
+                            <div class="flex justify-between items-center text-xs text-cyan-700 font-bold mb-2">
                                 <span>هوية كاملة + متجر إلكتروني</span>
-                                <span class="bg-orange-500/10 px-2.5 py-1 rounded-full border border-orange-500/20">Conversion +65%</span>
+                                <span class="bg-yellow-100 text-yellow-800 px-2.5 py-1 rounded-full border border-yellow-300 font-extrabold">Conversion +65%</span>
                             </div>
-                            <h4 class="text-lg font-bold text-white mb-2">إعادة تموضع علامة أورورا التجارية</h4>
-                            <p class="text-slate-400 text-xs leading-relaxed">تصميم هوية بصرية فاخرة وبرمجة صفحة هبوط ذات معدل تحويل عالي وربط الدفع والتتبع التلقائي.</p>
+                            <h4 class="text-lg font-bold text-slate-900 mb-2">إعادة تموضع علامة أورورا التجارية</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed">تصميم هوية بصرية فاخرة وبرمجة صفحة هبوط ذات معدل تحويل عالي وربط الدفع والتتبع التلقائي.</p>
                         </div>
                     </div>
 
@@ -474,71 +488,71 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-orange-400 font-bold text-sm uppercase">باقات شفافة ومصممة للنمو</span>
-                    <h3 class="text-3xl md:text-5xl font-black text-white mt-2 mb-4">اختر الباقة المناسبة لمرحلة مشروعك</h3>
-                    <p class="text-slate-400 text-base">لا توجد رسوم خفية. خطط مرنة تمنحك النتائج الملموسة والتقارير الواضحة منذ اليوم الأول.</p>
+                    <span class="inline-block px-4 py-1 rounded-full bg-cyan-50 border border-yellow-400 text-cyan-800 font-bold text-xs uppercase mb-2">باقات شفافة ومصممة للنمو</span>
+                    <h3 class="text-3xl md:text-5xl font-black text-slate-900 mt-2 mb-4">اختر الباقة المناسبة لمرحلة مشروعك</h3>
+                    <p class="text-slate-600 text-base">لا توجد رسوم خفية. خطط مرنة تمنحك النتائج الملموسة والتقارير الواضحة منذ اليوم الأول.</p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
                     
                     <!-- Basic Package -->
-                    <div class="p-8 rounded-3xl bg-slate-900/50 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+                    <div class="p-8 rounded-3xl bg-white border-2 border-cyan-100 hover:border-yellow-400 flex flex-col justify-between shadow-md transition">
                         <div>
                             <div class="text-xs font-bold text-slate-400 uppercase mb-2">باقة الانطلاق</div>
-                            <h4 class="text-2xl font-black text-white mb-4">الشركات الناشئة (Starter)</h4>
-                            <div class="text-4xl font-extrabold text-white mb-6">$499 <span class="text-sm font-normal text-slate-400">/ شهرياً</span></div>
-                            <p class="text-xs text-slate-400 mb-6">مناسبة للمشاريع الجديدة التي ترغب في تجربة الإعلانات الممولة وبناء جمهور مستهدف.</p>
+                            <h4 class="text-2xl font-black text-slate-900 mb-4">الشركات الناشئة (Starter)</h4>
+                            <div class="text-4xl font-black text-cyan-700 mb-6">$499 <span class="text-sm font-normal text-slate-500">/ شهرياً</span></div>
+                            <p class="text-xs text-slate-600 mb-6">مناسبة للمشاريع الجديدة التي ترغب في تجربة الإعلانات الممولة وبناء جمهور مستهدف.</p>
                             
-                            <ul class="space-y-3 text-xs text-slate-300 border-t border-slate-800 pt-6 mb-8">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> إدارة منصة إعلانية واحدة (Meta أو TikTok)</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> تصميم 6 بوستات وبانرات إعلانية</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> كتابة نصوص الإعلانات الإبداعية</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> إعداد بكسل التتبع الأساسي</li>
-                                <li class="flex items-center gap-2 text-slate-500"><i class="fa-solid fa-xmark"></i> إنتاج فيديوهات UGC مخصصة</li>
+                            <ul class="space-y-3 text-xs text-slate-700 border-t border-cyan-100 pt-6 mb-8">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> إدارة منصة إعلانية واحدة (Meta أو TikTok)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> تصميم 6 بوستات وبانرات إعلانية</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> كتابة نصوص الإعلانات الإبداعية</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> إعداد بكسل التتبع الأساسي</li>
+                                <li class="flex items-center gap-2 text-slate-400"><i class="fa-solid fa-xmark"></i> إنتاج فيديوهات UGC مخصصة</li>
                             </ul>
                         </div>
-                        <a href="#contact" class="w-full text-center py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm transition">اختر باقة الانطلاق</a>
+                        <a href="#contact" class="w-full text-center py-3.5 rounded-xl bg-slate-100 hover:bg-cyan-50 text-slate-800 hover:text-cyan-700 font-bold text-sm border border-slate-200 transition">اختر باقة الانطلاق</a>
                     </div>
 
                     <!-- Pro / Growth Package (Featured) -->
-                    <div class="p-8 rounded-3xl bg-gradient-to-b from-[#182138] to-slate-900 border-2 border-orange-500 relative flex flex-col justify-between shadow-2xl shadow-orange-500/10 scale-105 z-10">
-                        <div class="absolute -top-4 right-1/2 translate-x-1/2 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-[11px] font-extrabold uppercase px-4 py-1 rounded-full shadow-md">
+                    <div class="p-8 rounded-3xl bg-gradient-to-b from-cyan-900 to-slate-900 text-white border-4 border-yellow-400 relative flex flex-col justify-between shadow-2xl shadow-cyan-900/20 scale-105 z-10">
+                        <div class="absolute -top-4 right-1/2 translate-x-1/2 bg-gradient-to-r from-yellow-400 to-amber-400 text-slate-950 text-[11px] font-black uppercase px-4 py-1 rounded-full shadow-md border border-white">
                             الأكثر طلباً واختياراً 🔥
                         </div>
                         <div>
-                            <div class="text-xs font-bold text-orange-400 uppercase mb-2">باقة النمو والتوسع</div>
+                            <div class="text-xs font-bold text-yellow-300 uppercase mb-2">باقة النمو والتوسع</div>
                             <h4 class="text-2xl font-black text-white mb-4">المتاجر والنمو (Growth Pro)</h4>
-                            <div class="text-4xl font-extrabold text-white mb-6">$999 <span class="text-sm font-normal text-slate-400">/ شهرياً</span></div>
-                            <p class="text-xs text-slate-300 mb-6">الحل المثالي للمتاجر والشركات الراغبة في مضاعفة المبيعات والتوسع السريع في السوق.</p>
+                            <div class="text-4xl font-black text-yellow-300 mb-6">$999 <span class="text-sm font-normal text-cyan-200">/ شهرياً</span></div>
+                            <p class="text-xs text-cyan-100 mb-6">الحل المثالي للمتاجر والشركات الراغبة في مضاعفة المبيعات والتوسع السريع في السوق.</p>
                             
-                            <ul class="space-y-3 text-xs text-slate-200 border-t border-slate-700/80 pt-6 mb-8">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> إدارة حملات على منصتين (Meta + TikTok/Snap)</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> إنتاج 4 فيديوهات ريلز وتيك توك UGC احترافية</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> تصميم 12 إعلان تفاعلي شهرياً</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> تحسين مستمر لمعدل التحويل (CRO)</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> تقرير أسبوعي واجتماع متابعة استراتيجي</li>
+                            <ul class="space-y-3 text-xs text-slate-100 border-t border-cyan-800 pt-6 mb-8">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-400"></i> إدارة حملات على منصتين (Meta + TikTok/Snap)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-400"></i> إنتاج 4 فيديوهات ريلز وتيك توك UGC احترافية</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-400"></i> تصميم 12 إعلان تفاعلي شهرياً</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-400"></i> تحسين مستمر لمعدل التحويل (CRO)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-400"></i> تقرير أسبوعي واجتماع متابعة استراتيجي</li>
                             </ul>
                         </div>
-                        <a href="#contact" class="w-full text-center py-3.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-sm shadow-lg shadow-orange-500/25 hover:scale-[1.02] transition">ابدأ مع باقة النمو الآن</a>
+                        <a href="#contact" class="w-full text-center py-3.5 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-slate-950 font-black text-sm shadow-lg shadow-yellow-500/30 hover:scale-[1.02] transition border-b-2 border-amber-600">ابدأ مع باقة النمو الآن</a>
                     </div>
 
                     <!-- Enterprise Package -->
-                    <div class="p-8 rounded-3xl bg-slate-900/50 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+                    <div class="p-8 rounded-3xl bg-white border-2 border-cyan-100 hover:border-yellow-400 flex flex-col justify-between shadow-md transition">
                         <div>
                             <div class="text-xs font-bold text-slate-400 uppercase mb-2">باقة الهيمنة والشركات</div>
-                            <h4 class="text-2xl font-black text-white mb-4">المؤسسات (Enterprise)</h4>
-                            <div class="text-4xl font-extrabold text-white mb-6">$1,899 <span class="text-sm font-normal text-slate-400">/ شهرياً</span></div>
-                            <p class="text-xs text-slate-400 mb-6">فريق تسويق وإنتاج كامل مكرس لمشروعك لإدارة كافة القنوات والمؤثرين.</p>
+                            <h4 class="text-2xl font-black text-slate-900 mb-4">المؤسسات (Enterprise)</h4>
+                            <div class="text-4xl font-black text-cyan-700 mb-6">$1,899 <span class="text-sm font-normal text-slate-500">/ شهرياً</span></div>
+                            <p class="text-xs text-slate-600 mb-6">فريق تسويق وإنتاج كامل مكرس لمشروعك لإدارة كافة القنوات والمؤثرين.</p>
                             
-                            <ul class="space-y-3 text-xs text-slate-300 border-t border-slate-800 pt-6 mb-8">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> إدارة شاملة لكافة المنصات (Meta, TikTok, Google, Snap)</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> إنتاج لا محدود للمحتوى والفيديوهات وتجارب UGC</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> إدارة حملات المؤثرين والشراكات</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> مدير حساب مخصص (Account Manager 24/7)</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange-400"></i> بناء وتحسين صفحات الهبوط المتقدمة</li>
+                            <ul class="space-y-3 text-xs text-slate-700 border-t border-cyan-100 pt-6 mb-8">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> إدارة شاملة لكافة المنصات (Meta, TikTok, Google, Snap)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> إنتاج لا محدود للمحتوى والفيديوهات وتجارب UGC</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> إدارة حملات المؤثرين والشراكات</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> مدير حساب مخصص (Account Manager 24/7)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-600"></i> بناء وتحسين صفحات الهبوط المتقدمة</li>
                             </ul>
                         </div>
-                        <a href="#contact" class="w-full text-center py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm transition">تواصل لتخصيص الباقة</a>
+                        <a href="#contact" class="w-full text-center py-3.5 rounded-xl bg-slate-100 hover:bg-cyan-50 text-slate-800 hover:text-cyan-700 font-bold text-sm border border-slate-200 transition">تواصل لتخصيص الباقة</a>
                     </div>
 
                 </div>
@@ -547,45 +561,58 @@
         </section>
 
         <!-- CONTACT & LEAD FORM -->
-        <section id="contact" class="py-20 bg-[#0B0F19] relative border-t border-slate-800/80">
+        <section id="contact" class="py-20 bg-white relative border-t border-cyan-100">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     
                     <!-- Contact Info -->
                     <div class="lg:col-span-5 space-y-6">
-                        <span class="text-orange-400 font-bold text-sm uppercase">تواصل مع ماستر ميديا</span>
-                        <h3 class="text-3xl sm:text-4xl font-black text-white leading-tight">جاهز لرفع مبيعات علامتك التجارية إلى القمة؟</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">املأ النموذج وسيقوم مستشارنا الإعلاني بالتواصل معك خلال ساعتين لدراسة مشروعك وتقديم خطة نمو مخصصة ومجانية.</p>
+                        <span class="inline-block px-3 py-1 rounded-full bg-cyan-50 border border-yellow-400 text-cyan-800 font-bold text-xs uppercase">تواصل مع ماستر ميديا</span>
+                        <h3 class="text-3xl sm:text-4xl font-black text-slate-900 leading-tight">جاهز لرفع مبيعات علامتك التجارية إلى القمة؟</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">املأ النموذج وسيقوم مستشارنا الإعلاني بالتواصل معك خلال ساعتين لدراسة مشروعك وتقديم خطة نمو مخصصة ومجانية.</p>
                         
                         <div class="space-y-4 pt-4">
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-2xl bg-orange-500/10 border border-orange-500/20 text-orange-400 flex items-center justify-center text-xl">
+                                <div class="w-12 h-12 rounded-2xl bg-cyan-50 border-2 border-yellow-400 text-cyan-600 flex items-center justify-center text-xl shadow-sm">
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </div>
                                 <div>
-                                    <div class="text-xs text-slate-400">واتساب مباشر (24/7)</div>
-                                    <a href="https://wa.me/966500000000" class="text-sm font-bold text-white hover:text-orange-400 transition" dir="ltr">+966 50 000 0000</a>
+                                    <div class="text-xs text-slate-500 font-semibold">اتصال أو واتساب مباشر (24/7)</div>
+                                    <a href="https://wa.me/9647770836888" target="_blank" class="text-sm font-bold text-slate-900 hover:text-cyan-600 transition" dir="ltr">+964 777 083 6888</a>
                                 </div>
                             </div>
                             
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-2xl bg-orange-500/10 border border-orange-500/20 text-orange-400 flex items-center justify-center text-xl">
+                                <div class="w-12 h-12 rounded-2xl bg-cyan-50 border-2 border-yellow-400 text-cyan-600 flex items-center justify-center text-xl shadow-sm">
                                     <i class="fa-regular fa-envelope"></i>
                                 </div>
                                 <div>
-                                    <div class="text-xs text-slate-400">البريد الإلكتروني الرسمي</div>
-                                    <a href="mailto:contact@mastermediaads.com" class="text-sm font-bold text-white hover:text-orange-400 transition">contact@mastermediaads.com</a>
+                                    <div class="text-xs text-slate-500 font-semibold">البريد الإلكتروني الرسمي</div>
+                                    <a href="mailto:contact@mastermediaads.com" class="text-sm font-bold text-slate-900 hover:text-cyan-600 transition">contact@mastermediaads.com</a>
                                 </div>
                             </div>
 
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-2xl bg-orange-500/10 border border-orange-500/20 text-orange-400 flex items-center justify-center text-xl">
+                                <div class="w-12 h-12 rounded-2xl bg-pink-50 border-2 border-yellow-400 text-pink-600 flex items-center justify-center text-xl shadow-sm">
+                                    <i class="fa-brands fa-instagram text-2xl text-[#E4405F]"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-500 font-semibold">حساب إنستغرام الرسمي</div>
+                                    <a href="https://www.instagram.com/mastermediads" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-slate-900 hover:text-cyan-600 transition flex items-center gap-1.5" dir="ltr">
+                                        <span>@mastermediads</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-[11px] text-cyan-600"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-cyan-50 border-2 border-yellow-400 text-cyan-600 flex items-center justify-center text-xl shadow-sm">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                                 <div>
-                                    <div class="text-xs text-slate-400">خدماتنا تغطي</div>
-                                    <span class="text-sm font-bold text-white">المملكة العربية السعودية، الخليج والشرق الأوسط</span>
+                                    <div class="text-xs text-slate-500 font-semibold">خدماتنا تغطي</div>
+                                    <span class="text-sm font-bold text-slate-900">العراق، الخليج، والشرق الأوسط</span>
                                 </div>
                             </div>
                         </div>
@@ -594,28 +621,31 @@
 
                     <!-- Interactive Contact Form -->
                     <div class="lg:col-span-7">
-                        <div class="p-8 sm:p-10 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl relative">
+                        <div class="p-8 sm:p-10 rounded-3xl bg-[#F8FAFC] border-2 border-cyan-200 shadow-xl relative">
+                            <!-- Yellow Top Border Accent -->
+                            <div class="absolute top-0 left-8 right-8 h-1.5 bg-gradient-to-r from-yellow-400 via-cyan-500 to-yellow-400 rounded-b-full"></div>
+
                             <form id="contactForm" class="space-y-4">
                                 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
-                                        <label class="block text-xs font-semibold text-slate-300 mb-2">اسمك الكريم *</label>
-                                        <input type="text" required id="formName" placeholder="مثال: أحمد المحمد" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-orange-500">
+                                        <label class="block text-xs font-bold text-slate-700 mb-2">اسمك الكريم *</label>
+                                        <input type="text" required id="formName" placeholder="مثال: أحمد المحمد" class="w-full bg-white border-2 border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-cyan-500">
                                     </div>
                                     <div>
-                                        <label class="block text-xs font-semibold text-slate-300 mb-2">رقم الجوال / واتساب *</label>
-                                        <input type="tel" required id="formPhone" placeholder="05xxxxxxxx" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 text-right" dir="ltr">
+                                        <label class="block text-xs font-bold text-slate-700 mb-2">رقم الجوال / واتساب *</label>
+                                        <input type="tel" required id="formPhone" placeholder="077xxxxxxxx" class="w-full bg-white border-2 border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-cyan-500 text-right" dir="ltr">
                                     </div>
                                 </div>
 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
-                                        <label class="block text-xs font-semibold text-slate-300 mb-2">اسم الشركة أو المتجر</label>
-                                        <input type="text" id="formBrand" placeholder="اسم مشروعك" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-orange-500">
+                                        <label class="block text-xs font-bold text-slate-700 mb-2">اسم الشركة أو المتجر</label>
+                                        <input type="text" id="formBrand" placeholder="اسم مشروعك" class="w-full bg-white border-2 border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-cyan-500">
                                     </div>
                                     <div>
-                                        <label class="block text-xs font-semibold text-slate-300 mb-2">الخدمة المطلوبة</label>
-                                        <select id="formService" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500">
+                                        <label class="block text-xs font-bold text-slate-700 mb-2">الخدمة المطلوبة</label>
+                                        <select id="formService" class="w-full bg-white border-2 border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-cyan-500">
                                             <option value="paid-ads">حملات إعلانية ممولة</option>
                                             <option value="media-production">إنتاج فيديو وإعلانات UGC</option>
                                             <option value="social-media">إدارة السوشيال ميديا</option>
@@ -626,12 +656,12 @@
                                 </div>
 
                                 <div>
-                                    <label class="block text-xs font-semibold text-slate-300 mb-2">تفاصيل إضافية عن مشروعك وميزانيتك المقترحة</label>
-                                    <textarea id="formMessage" rows="3" placeholder="أخبرنا باختصار عن أهدافك وما ترغب بتحقيقه..." class="w-full bg-slate-800/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-orange-500"></textarea>
+                                    <label class="block text-xs font-bold text-slate-700 mb-2">تفاصيل إضافية عن مشروعك وميزانيتك المقترحة</label>
+                                    <textarea id="formMessage" rows="3" placeholder="أخبرنا باختصار عن أهدافك وما ترغب بتحقيقه..." class="w-full bg-white border-2 border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-cyan-500"></textarea>
                                 </div>
 
-                                <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 text-white font-bold text-base shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 hover:scale-[1.01] transition flex items-center justify-center gap-2">
-                                    <i class="fa-solid fa-paper-plane"></i>
+                                <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-600 via-cyan-500 to-teal-500 text-white font-bold text-base shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.01] transition flex items-center justify-center gap-2 border-b-4 border-yellow-400">
+                                    <i class="fa-solid fa-paper-plane text-yellow-300"></i>
                                     <span>إرسال الطلب وحجز الاستشارة المجانية</span>
                                 </button>
                                 
@@ -640,13 +670,13 @@
                             </form>
 
                             <!-- Success Feedback Box -->
-                            <div id="formSuccessMessage" class="hidden absolute inset-0 bg-[#0B101D] rounded-3xl p-8 flex flex-col items-center justify-center text-center z-20">
-                                <div class="w-16 h-16 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center text-3xl mb-4">
+                            <div id="formSuccessMessage" class="hidden absolute inset-0 bg-white rounded-3xl p-8 flex flex-col items-center justify-center text-center z-20 border-2 border-cyan-400">
+                                <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mb-4 ring-4 ring-yellow-400">
                                     <i class="fa-solid fa-check"></i>
                                 </div>
-                                <h4 class="text-2xl font-bold text-white mb-2">تم استلام طلبك بنجاح!</h4>
-                                <p class="text-slate-300 text-sm mb-6 max-w-sm">شكراً لتواصلك مع ماستر ميديا. سيقوم أحد خبراء التسويق لدينا بالرد عليك عبر الواتساب في أقرب وقت.</p>
-                                <button type="button" id="resetFormBtn" class="px-6 py-2.5 rounded-full bg-slate-800 text-slate-200 text-xs font-semibold hover:bg-slate-700 transition">إرسال استفسار آخر</button>
+                                <h4 class="text-2xl font-bold text-slate-900 mb-2">تم استلام طلبك بنجاح!</h4>
+                                <p class="text-slate-600 text-sm mb-6 max-w-sm">شكراً لتواصلك مع ماستر ميديا. سيقوم أحد خبراء التسويق لدينا بالرد عليك عبر الواتساب في أقرب وقت.</p>
+                                <button type="button" id="resetFormBtn" class="px-6 py-2.5 rounded-full bg-cyan-600 text-white text-xs font-semibold hover:bg-cyan-700 transition">إرسال استفسار آخر</button>
                             </div>
 
                         </div>
@@ -660,30 +690,30 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-[#06080F] border-t border-slate-900 text-slate-400 text-sm py-12">
+    <footer class="bg-slate-950 text-slate-400 text-sm py-12 border-t-4 border-yellow-400">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-900">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
                 
                 <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-orange-600 to-amber-500 flex items-center justify-center text-white font-bold">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-600 to-teal-400 flex items-center justify-center text-white font-bold ring-2 ring-yellow-400">
                         <i class="fa-solid fa-bolt"></i>
                     </div>
                     <span class="text-lg font-bold text-white font-en tracking-tight">MASTER MEDIA ADS</span>
                 </div>
 
-                <div class="flex items-center gap-6 text-xs text-slate-400">
-                    <a href="#home" class="hover:text-orange-400 transition">الرئيسية</a>
-                    <a href="#services" class="hover:text-orange-400 transition">الخدمات</a>
-                    <a href="#portfolio" class="hover:text-orange-400 transition">الأعمال</a>
-                    <a href="#packages" class="hover:text-orange-400 transition">الأسعار</a>
-                    <a href="#contact" class="hover:text-orange-400 transition">تواصل معنا</a>
+                <div class="flex items-center gap-6 text-xs text-slate-300">
+                    <a href="#home" class="hover:text-cyan-400 transition">الرئيسية</a>
+                    <a href="#services" class="hover:text-cyan-400 transition">الخدمات</a>
+                    <a href="#portfolio" class="hover:text-cyan-400 transition">الأعمال</a>
+                    <a href="#packages" class="hover:text-cyan-400 transition">الأسعار</a>
+                    <a href="#contact" class="hover:text-cyan-400 transition">تواصل معنا</a>
                 </div>
 
-                <div class="flex items-center gap-4 text-slate-400 text-lg">
-                    <a href="#" class="hover:text-orange-400 transition" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" class="hover:text-orange-400 transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="hover:text-orange-400 transition" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#" class="hover:text-orange-400 transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <div class="flex items-center gap-4 text-slate-300 text-lg">
+                    <a href="#" class="hover:text-cyan-400 transition" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/mastermediads" target="_blank" rel="noopener noreferrer" class="hover:text-[#E4405F] transition hover:scale-110" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-cyan-400 transition" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" class="hover:text-cyan-400 transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
 
             </div>
@@ -696,9 +726,9 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/966500000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D9%85%D8%A7%D8%B3%D8%AA%D8%B1%20%D9%85%D9%8A%D8%AF%D9%8A%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A8%D8%AF%D8%A1%20%D8%AD%D9%85%D9%84%D8%A9%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D9%8A%D8%A9" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center text-2xl shadow-xl shadow-emerald-500/30 hover:scale-110 active:scale-95 transition-all duration-300 group" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/9647770836888?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D9%85%D8%A7%D8%B3%D8%AA%D8%B1%20%D9%85%D9%8A%D8%AF%D9%8A%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A8%D8%AF%D8%A1%20%D8%AD%D9%85%D9%84%D8%A9%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D9%8A%D8%A9" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center text-2xl shadow-xl shadow-emerald-500/30 hover:scale-110 active:scale-95 transition-all duration-300 ring-4 ring-yellow-400 group" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
-        <span class="absolute right-16 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-slate-800 shadow-lg">
+        <span class="absolute right-16 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-yellow-400 shadow-lg">
             تحدث معنا مباشرة
         </span>
     </a>

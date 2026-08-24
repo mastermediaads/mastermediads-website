@@ -1,4 +1,4 @@
-// Master Media Ads - Interactive Scripts
+// Master Media Ads - Interactive Scripts (Light Cyan & Yellow Theme)
 
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -99,11 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
     platformBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             platformBtns.forEach(b => {
-                b.classList.remove('active', 'border-orange-500/80', 'bg-orange-500/10', 'text-white');
-                b.classList.add('border-slate-800', 'bg-slate-800/40', 'text-slate-400');
+                b.classList.remove('active', 'border-cyan-500', 'bg-cyan-50', 'text-cyan-800', 'shadow-sm');
+                b.classList.add('border-slate-200', 'bg-slate-50', 'text-slate-600');
             });
-            btn.classList.add('active', 'border-orange-500/80', 'bg-orange-500/10', 'text-white');
-            btn.classList.remove('border-slate-800', 'bg-slate-800/40', 'text-slate-400');
+            btn.classList.add('active', 'border-cyan-500', 'bg-cyan-50', 'text-cyan-800', 'shadow-sm');
+            btn.classList.remove('border-slate-200', 'bg-slate-50', 'text-slate-600');
             currentPlatformCpc = parseFloat(btn.dataset.cpc || 0.25);
             calculateCampaignEstimates();
         });
@@ -119,11 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             filterBtns.forEach(b => {
-                b.classList.remove('active', 'bg-orange-500', 'text-white');
-                b.classList.add('bg-slate-800', 'text-slate-300');
+                b.classList.remove('active', 'bg-cyan-600', 'text-white', 'border-b-2', 'border-yellow-400');
+                b.classList.add('bg-slate-100', 'text-slate-700');
             });
-            btn.classList.add('active', 'bg-orange-500', 'text-white');
-            btn.classList.remove('bg-slate-800', 'text-slate-300');
+            btn.classList.add('active', 'bg-cyan-600', 'text-white', 'border-b-2', 'border-yellow-400');
+            btn.classList.remove('bg-slate-100', 'text-slate-700');
 
             const filter = btn.getAttribute('data-filter');
 
@@ -153,7 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const service = document.getElementById('formService').value;
             const message = document.getElementById('formMessage').value;
 
-            // Prepare WhatsApp direct message
             const serviceNames = {
                 'paid-ads': 'حملات إعلانية ممولة',
                 'media-production': 'إنتاج فيديو وإعلانات UGC',
@@ -178,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Open WhatsApp link in new tab after brief delay
             setTimeout(() => {
-                window.open(`https://wa.me/966500000000?text=${waText}`, '_blank');
+                window.open(`https://wa.me/9647770836888?text=${waText}`, '_blank');
             }, 800);
         });
 
@@ -194,9 +193,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.classList.add('shadow-xl', 'bg-[#090D16]/95');
+            navbar.classList.add('shadow-md');
         } else {
-            navbar.classList.remove('shadow-xl');
+            navbar.classList.remove('shadow-md');
         }
     });
 
