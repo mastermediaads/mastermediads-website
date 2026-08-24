@@ -1,0 +1,76 @@
+/* Custom Styles for Master Media Ads */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #090D16;
+}
+::-webkit-scrollbar-thumb {
+    background: #1f2937;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #f97316;
+}
+
+/* Smooth Glow animations */
+@keyframes pulseGlow {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+.animate-glow {
+    animation: pulseGlow 6s infinite ease-in-out;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+    background: rgba(17, 24, 39, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Active Navigation Link Indicator */
+.nav-link.active {
+    color: #f97316;
+    background-color: rgba(30, 41, 59, 0.8);
+}
+
+/* Custom Range Slider Style */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background: #f97316;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.6);
+    border: 2px solid #ffffff;
+}
+
+input[type=range]::-moz-range-thumb {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background: #f97316;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.6);
+    border: 2px solid #ffffff;
+}
