@@ -1,7 +1,7 @@
 import React from 'react';
-import { AGENCY_INFO, PLATFORMS_LIST } from '../data/content';
+import { AGENCY_INFO } from '../data/content';
 import { Logo } from './Logo';
-import { ArrowLeft, Sparkles, Video, Megaphone, TrendingUp, Play, Eye, Flame, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, Sparkles, Video, Megaphone, TrendingUp, Play, Eye, Flame } from 'lucide-react';
 
 interface HeroSectionProps {
   onOpenContact: () => void;
@@ -11,23 +11,26 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] pt-32 pb-20 md:pt-40 md:pb-28 flex items-center justify-center overflow-hidden"
+      className="relative min-h-[90vh] pt-32 pb-16 md:pt-40 md:pb-24 flex items-center justify-center overflow-hidden"
     >
       {/* 1. Dynamic Ambient Glowing Light Blobs */}
-      <div className="ambient-glow-orb ambient-cyan w-[500px] h-[500px] -top-24 -right-24 animate-pulse-glow" />
-      <div className="ambient-glow-orb ambient-blue w-[600px] h-[600px] top-1/3 -left-32 animate-float-slow" />
-      <div className="ambient-glow-orb ambient-cyan w-[400px] h-[400px] -bottom-20 right-1/4 animate-float-reverse" />
+      <div className="ambient-glow-orb ambient-cyan w-[450px] h-[450px] -top-24 -right-24 animate-pulse-glow" />
+      <div className="ambient-glow-orb ambient-blue w-[550px] h-[550px] top-1/3 -left-32 animate-float-slow" />
 
-      {/* 2. Massive Watermark Background Geometric Glyph */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] sm:w-[900px] sm:h-[900px] pointer-events-none opacity-[0.035] select-none -z-0">
-        <Logo variant="mark" size="custom" className="w-full h-full" />
+      {/* 2. Massive Watermark Background Circular Logo */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] sm:w-[750px] sm:h-[750px] pointer-events-none opacity-[0.035] select-none -z-0">
+        <img
+          src="/logo.webp"
+          alt="Master Media Background Watermark"
+          className="w-full h-full object-cover rounded-full"
+        />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
-          {/* Right Column: Hero Typography & Actions (RTL) */}
-          <div className="lg:col-span-7 text-center lg:text-right space-y-6 sm:space-y-8">
+          {/* Right Column: Hero Typography & Actions (RTL Arabic Right-Aligned) */}
+          <div className="lg:col-span-7 text-right space-y-6">
             
             {/* Top Identity Badge */}
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full liquid-glass-card border-cyanGlow-500/30 text-cyanGlow-300 text-xs sm:text-sm font-bold shadow-cyan-glow/20">
@@ -39,38 +42,38 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
               <span>وكالة إعلانية وإنتاج إعلامي بهوية رقمية متقدمة</span>
             </div>
 
-            {/* Brand Headline */}
-            <div className="space-y-3">
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.18] font-heading">
+            {/* Brand Headline (Refined Elegant Size) */}
+            <div className="space-y-2.5">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.25] font-heading">
                 {AGENCY_INFO.name}
               </h1>
 
               {/* Inspiring Tagline */}
-              <p className="text-xl sm:text-2xl lg:text-3xl font-bold cyan-gradient-text font-heading leading-relaxed">
+              <p className="text-lg sm:text-xl lg:text-2xl font-bold cyan-gradient-text font-heading leading-relaxed">
                 {AGENCY_INFO.tagline}
               </p>
             </div>
 
             {/* Concise Mission Description */}
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl font-normal">
               {AGENCY_INFO.description}
             </p>
 
-            {/* Dual Liquid Glass Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            {/* Dual Liquid Glass Action Buttons (Right-aligned) */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3.5 pt-2">
               {/* Primary Button: Discover Services */}
               <a
                 href="#services"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-base font-bold text-white liquid-glass-btn group"
+                className="inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-full text-sm font-bold text-white liquid-glass-btn group"
               >
                 <span>اكتشف خدماتنا</span>
-                <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
+                <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
               </a>
 
               {/* Secondary Button: Contact Us */}
               <button
                 onClick={onOpenContact}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-base font-bold text-slate-200 hover:text-white liquid-glass-btn-secondary group"
+                className="inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-full text-sm font-bold text-slate-200 hover:text-white liquid-glass-btn-secondary group"
               >
                 <span>تواصل معنا</span>
                 <Sparkles className="w-4 h-4 text-cyanGlow-400 transition-transform group-hover:scale-110" />
@@ -78,8 +81,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             </div>
 
             {/* Quick Guarantees / Pillars */}
-            <div className="pt-6 border-t border-white/10 grid grid-cols-3 gap-3 sm:gap-4 max-w-xl mx-auto lg:mx-0">
-              <div className="text-right">
+            <div className="pt-6 border-t border-white/10 grid grid-cols-3 gap-3 sm:gap-4 max-w-xl text-right">
+              <div>
                 <div className="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-white">
                   <Video className="w-4 h-4 text-cyanGlow-400 shrink-0" />
                   <span>تصوير سينمائي</span>
@@ -87,7 +90,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
                 <p className="text-[11px] sm:text-xs text-slate-400 mt-0.5">إنتاج فيديو عالي الجودة</p>
               </div>
 
-              <div className="text-right">
+              <div>
                 <div className="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-white">
                   <Megaphone className="w-4 h-4 text-cyanGlow-400 shrink-0" />
                   <span>ترويج مستهدف</span>
@@ -95,7 +98,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
                 <p className="text-[11px] sm:text-xs text-slate-400 mt-0.5">حملات مدروسة بدقة</p>
               </div>
 
-              <div className="text-right">
+              <div>
                 <div className="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-white">
                   <TrendingUp className="w-4 h-4 text-cyanGlow-400 shrink-0" />
                   <span>عائد حقيقي</span>
@@ -106,24 +109,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
 
           </div>
 
-          {/* Left Column: Visual Showcase (Liquid Glass 3D Deck & Dynamic Metrics) */}
+          {/* Left Column: Visual Showcase (Liquid Glass 3D Deck & Circular Logo Emblem) */}
           <div className="lg:col-span-5 relative flex items-center justify-center">
             
-            {/* Ambient Backlight for Mockup */}
+            {/* Ambient Backlight */}
             <div className="absolute inset-0 bg-gradient-to-tr from-electric-600/30 via-cyanGlow-500/20 to-transparent rounded-3xl blur-3xl" />
 
             {/* Main Interactive Liquid Glass Showcase Card */}
-            <div className="relative w-full max-w-md liquid-glass-card rounded-3xl p-6 sm:p-7 border border-white/20 shadow-2xl animate-float-slow">
+            <div className="relative w-full max-w-md liquid-glass-card rounded-3xl p-6 sm:p-7 border border-white/20 shadow-2xl animate-float-slow text-right">
               
               {/* Header inside Card */}
               <div className="flex items-center justify-between pb-5 border-b border-white/10">
                 <div className="flex items-center gap-3">
                   <Logo variant="badge" size="sm" />
-                  <div>
+                  <div className="text-right">
                     <h3 className="text-sm font-bold text-white font-heading">
                       ماستر ميديا
                     </h3>
-                    <p className="text-[11px] text-cyanGlow-400 font-mono">
+                    <p className="text-[10px] text-cyanGlow-400 font-mono">
                       LIVE CAMPAIGN PERFORMANCE
                     </p>
                   </div>
@@ -141,7 +144,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
                     <div className="w-8 h-8 rounded-lg bg-electric-600/30 border border-electric-500/40 text-cyanGlow-300 flex items-center justify-center">
                       <Play className="w-4 h-4 text-cyanGlow-400 fill-cyanGlow-400" />
                     </div>
-                    <div>
+                    <div className="text-right">
                       <p className="text-xs font-bold text-white">إعلان فيديو ريلز وسوشيال</p>
                       <p className="text-[10px] text-slate-400">Cinematic 4K UGC Production</p>
                     </div>

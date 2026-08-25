@@ -1,5 +1,5 @@
 import React from 'react';
-import { AGENCY_INFO, NAV_LINKS, SERVICES } from '../data/content';
+import { AGENCY_INFO, SERVICES } from '../data/content';
 import { Logo } from './Logo';
 import { MessageCircle, ArrowUp } from 'lucide-react';
 
@@ -29,7 +29,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
   };
 
   return (
-    <footer className="bg-deep-950 text-slate-400 pt-20 pb-12 relative overflow-hidden border-t border-white/10">
+    <footer className="bg-deep-950 text-slate-400 pt-16 pb-10 relative overflow-hidden border-t border-white/10">
       
       {/* Subtle Ambient Light */}
       <div className="ambient-glow-orb ambient-cyan w-96 h-96 -top-32 right-1/3" />
@@ -37,69 +37,69 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Main Footer Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-16 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-12 border-b border-white/10 text-right">
           
           {/* Col 1: Brand & Logo (5 cols) */}
-          <div className="lg:col-span-5 space-y-5 text-right">
-            <div className="flex items-center gap-3.5">
+          <div className="lg:col-span-5 space-y-4">
+            <div className="flex items-center gap-3">
               <Logo variant="badge" size="md" />
-              <div>
-                <h3 className="text-xl font-bold text-white font-heading">
+              <div className="text-right">
+                <h3 className="text-lg font-bold text-white font-heading">
                   {AGENCY_INFO.name}
                 </h3>
-                <p className="text-xs text-cyanGlow-400 font-mono">
+                <p className="text-[11px] text-cyanGlow-400 font-mono">
                   {AGENCY_INFO.englishName}
                 </p>
               </div>
             </div>
 
-            <p className="text-slate-300 text-sm leading-relaxed max-w-sm">
+            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-sm">
               {AGENCY_INFO.description}
             </p>
 
             {/* Social Icons Links */}
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex items-center gap-2.5 pt-1">
               <a
                 href={AGENCY_INFO.instagram.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/10 hover:border-pink-400/50 hover:bg-pink-500/10 text-slate-300 hover:text-pink-400 transition-all flex items-center justify-center"
+                className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/10 hover:border-pink-400/50 hover:bg-pink-500/10 text-slate-300 hover:text-pink-400 transition-all flex items-center justify-center"
                 title="Instagram"
                 aria-label="Instagram"
               >
-                <InstagramIcon className="w-5 h-5" />
+                <InstagramIcon className="w-4 h-4" />
               </a>
 
               <a
                 href={AGENCY_INFO.facebook.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/10 hover:border-blue-400/50 hover:bg-blue-500/10 text-slate-300 hover:text-blue-400 transition-all flex items-center justify-center"
+                className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/10 hover:border-blue-400/50 hover:bg-blue-500/10 text-slate-300 hover:text-blue-400 transition-all flex items-center justify-center"
                 title="Facebook"
                 aria-label="Facebook"
               >
-                <FacebookIcon className="w-5 h-5" />
+                <FacebookIcon className="w-4 h-4" />
               </a>
 
               <a
                 href={AGENCY_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/10 hover:border-emerald-400/50 hover:bg-emerald-500/10 text-slate-300 hover:text-emerald-400 transition-all flex items-center justify-center"
+                className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/10 hover:border-emerald-400/50 hover:bg-emerald-500/10 text-slate-300 hover:text-emerald-400 transition-all flex items-center justify-center"
                 title="WhatsApp"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="w-5 h-5" />
+                <MessageCircle className="w-4 h-4" />
               </a>
             </div>
           </div>
 
           {/* Col 2: Core Services (4 cols) */}
-          <div className="lg:col-span-4 space-y-4 text-right">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-heading pb-1 border-b border-white/10 inline-block">
+          <div className="lg:col-span-4 space-y-3">
+            <h4 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider font-heading pb-1 border-b border-white/10 inline-block">
               خدماتنا
             </h4>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-2.5 text-xs sm:text-sm">
               {SERVICES.map((service) => (
                 <li key={service.id}>
                   <button
@@ -115,12 +115,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
           </div>
 
           {/* Col 3: Direct Contact Information (3 cols) */}
-          <div className="lg:col-span-3 space-y-4 text-right">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-heading pb-1 border-b border-white/10 inline-block">
+          <div className="lg:col-span-3 space-y-3">
+            <h4 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider font-heading pb-1 border-b border-white/10 inline-block">
               معلومات التواصل
             </h4>
 
-            <div className="space-y-2.5 text-xs sm:text-sm text-slate-300">
+            <div className="space-y-2 text-xs sm:text-sm text-slate-300">
               <p>
                 <span className="text-slate-400">Instagram:</span>{' '}
                 <a
@@ -140,9 +140,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                   href={AGENCY_INFO.facebook.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-cyanGlow-300 hover:underline"
+                  className="text-cyanGlow-300 hover:underline font-mono"
+                  dir="ltr"
                 >
-                  {AGENCY_INFO.facebook.name}
+                  facebook.com/mastermediaads
                 </a>
               </p>
 
@@ -164,21 +165,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
         </div>
 
         {/* Bottom Copyright Row */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
           <div>
             <p>© {AGENCY_INFO.copyrightYear} Master Media. All Rights Reserved.</p>
           </div>
 
           <p className="text-[11px] text-slate-500">
-            ماستر ميديا للترويج والإعلان — تصميم وتطوير احترافي بهوية Liquid Glass
+            ماستر ميديا للترويج والإعلان — هوية Liquid Glass الفاخرة
           </p>
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/10 hover:border-cyanGlow-400 text-slate-300 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 hover:border-cyanGlow-400 text-slate-300 hover:text-white transition-colors text-[11px]"
           >
             <span>للأعلى</span>
-            <ArrowUp className="w-3.5 h-3.5" />
+            <ArrowUp className="w-3 h-3" />
           </button>
         </div>
 

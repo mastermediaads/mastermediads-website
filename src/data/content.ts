@@ -56,14 +56,15 @@ export const AGENCY_INFO = {
   },
   facebook: {
     name: 'master media',
-    url: 'https://facebook.com/mastermediads',
+    url: 'https://facebook.com/mastermediaads',
   },
+  logoPath: '/logo.webp',
   location: 'العراق والخليج العربي والشرق الأوسط',
   hours: 'على مدار الساعة 24/7',
   copyrightYear: '2026',
 };
 
-// 3. Exactly 2 Core Services (As specified in prompt requirements)
+// 3. Exactly 2 Core Services
 export const SERVICES: Service[] = [
   {
     id: 'video-production',

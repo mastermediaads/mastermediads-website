@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AGENCY_INFO, SERVICES } from '../data/content';
-import { MessageCircle, Phone, Mail, MapPin, Send, CheckCircle2, Clock, Sparkles } from 'lucide-react';
+import { MessageCircle, MapPin, Send, CheckCircle2, Clock, Sparkles } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 // Brand-accurate Instagram SVG icon
@@ -56,43 +56,43 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-28 relative overflow-hidden bg-deep-900/60">
+    <section id="contact" className="py-24 relative overflow-hidden bg-deep-900/60">
       {/* Background Ambient Glow */}
-      <div className="ambient-glow-orb ambient-blue w-[500px] h-[500px] top-10 -right-20" />
-      <div className="ambient-glow-orb ambient-cyan w-[400px] h-[400px] -bottom-10 -left-10" />
+      <div className="ambient-glow-orb ambient-blue w-[450px] h-[450px] top-10 -right-20" />
+      <div className="ambient-glow-orb ambient-cyan w-[350px] h-[350px] -bottom-10 -left-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full liquid-glass-card border-cyanGlow-500/30 text-cyanGlow-300 text-xs font-bold mb-4">
+        {/* Section Header (Right-aligned & Refined Heading Size) */}
+        <div className="text-right max-w-3xl mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full liquid-glass-card border-cyanGlow-500/30 text-cyanGlow-300 text-xs font-bold mb-3">
             <Sparkles className="w-3.5 h-3.5 text-cyanGlow-400" />
             <span>قنوات التواصل المباشرة</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight font-heading leading-tight mb-4">
+          <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight font-heading leading-tight mb-3">
             تواصل معنا
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
             يسعدنا مناقشة مشروعك وتقديم استشارة مخصصة تلبي طموحات نمو علامتك التجارية.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start max-w-6xl mx-auto">
           
           {/* Direct Social & Contact Channels (5 cols) */}
-          <div className="lg:col-span-5 space-y-4">
+          <div className="lg:col-span-5 space-y-3.5">
             
             {/* WhatsApp Card */}
             <a
               href={AGENCY_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-2xl liquid-glass-card p-5 border border-emerald-500/30 hover:border-emerald-400/60 transition-all hover:-translate-y-1 shadow-lg"
+              className="group block rounded-2xl liquid-glass-card p-4 sm:p-5 border border-emerald-500/30 hover:border-emerald-400/60 transition-all hover:-translate-y-1 shadow-md"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/40 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/40 group-hover:scale-105 transition-transform">
                   <MessageCircle className="w-6 h-6" />
                 </div>
                 <div className="text-right">
@@ -109,10 +109,10 @@ export const ContactSection: React.FC = () => {
               href={AGENCY_INFO.instagram.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-2xl liquid-glass-card p-5 border border-pink-500/30 hover:border-pink-400/60 transition-all hover:-translate-y-1 shadow-lg"
+              className="group block rounded-2xl liquid-glass-card p-4 sm:p-5 border border-pink-500/30 hover:border-pink-400/60 transition-all hover:-translate-y-1 shadow-md"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center shrink-0 border border-pink-500/40 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center shrink-0 border border-pink-500/40 group-hover:scale-105 transition-transform">
                   <InstagramIcon className="w-6 h-6" />
                 </div>
                 <div className="text-right">
@@ -129,10 +129,10 @@ export const ContactSection: React.FC = () => {
               href={AGENCY_INFO.facebook.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-2xl liquid-glass-card p-5 border border-blue-500/30 hover:border-blue-400/60 transition-all hover:-translate-y-1 shadow-lg"
+              className="group block rounded-2xl liquid-glass-card p-4 sm:p-5 border border-blue-500/30 hover:border-blue-400/60 transition-all hover:-translate-y-1 shadow-md"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/40 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/40 group-hover:scale-105 transition-transform">
                   <FacebookIcon className="w-6 h-6" />
                 </div>
                 <div className="text-right">
@@ -145,12 +145,12 @@ export const ContactSection: React.FC = () => {
             </a>
 
             {/* Coverage Area Box */}
-            <div className="rounded-2xl liquid-glass-card p-5 border border-white/10 text-right">
+            <div className="rounded-2xl liquid-glass-card p-4 sm:p-5 border border-white/10 text-right">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-cyanGlow-400 shrink-0 mt-1" />
+                <MapPin className="w-5 h-5 text-cyanGlow-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-xs text-slate-400 block">نطاق الخدمة</span>
-                  <p className="text-sm font-bold text-white">{AGENCY_INFO.location}</p>
+                  <p className="text-xs sm:text-sm font-bold text-white">{AGENCY_INFO.location}</p>
                 </div>
               </div>
             </div>
@@ -159,31 +159,31 @@ export const ContactSection: React.FC = () => {
 
           {/* Quick Consultation Form (7 cols) */}
           <div className="lg:col-span-7">
-            <div className="liquid-glass-card rounded-3xl p-6 sm:p-10 border border-white/20 shadow-2xl relative">
+            <div className="liquid-glass-card rounded-3xl p-6 sm:p-8 lg:p-9 border border-white/20 shadow-xl relative">
               
               {isSubmitted ? (
-                <div className="text-center py-10 space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle2 className="w-10 h-10" />
+                <div className="text-center py-8 space-y-3">
+                  <div className="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto mb-3">
+                    <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white font-heading">
+                  <h3 className="text-xl font-bold text-white font-heading">
                     تم تجهيز طلبك بنجاح!
                   </h3>
-                  <p className="text-slate-300 text-sm max-w-sm mx-auto leading-relaxed">
+                  <p className="text-slate-300 text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
                     جاري فتح محادثة الواتساب لنقل التفاصيل إلى مستشارنا الإعلاني فوراً.
                   </p>
                   <button
                     type="button"
                     onClick={() => setIsSubmitted(false)}
-                    className="px-6 py-2 rounded-full text-xs font-bold text-slate-300 bg-white/10 hover:bg-white/20 transition-colors"
+                    className="px-5 py-2 rounded-full text-xs font-bold text-slate-300 bg-white/10 hover:bg-white/20 transition-colors"
                   >
                     إرسال طلب آخر
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 text-right">
-                  <div className="mb-6">
-                    <h3 className="text-xl font-bold text-white font-heading mb-1">
+                  <div className="mb-5">
+                    <h3 className="text-lg sm:text-xl font-bold text-white font-heading mb-1">
                       احجز استشارتك التسويقية
                     </h3>
                     <p className="text-xs text-slate-400">
@@ -191,9 +191,9 @@ export const ContactSection: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                      <label className="block text-xs font-bold text-slate-300 mb-1">
                         الاسم الكريم *
                       </label>
                       <input
@@ -202,12 +202,12 @@ export const ContactSection: React.FC = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="مثال: أحمد العراقي"
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyanGlow-400 focus:ring-1 focus:ring-cyanGlow-400"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-cyanGlow-400 focus:ring-1 focus:ring-cyanGlow-400"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                      <label className="block text-xs font-bold text-slate-300 mb-1">
                         رقم الجوال / واتساب *
                       </label>
                       <input
@@ -217,14 +217,14 @@ export const ContactSection: React.FC = () => {
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="077XXXXXXXX"
                         dir="ltr"
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyanGlow-400 focus:ring-1 focus:ring-cyanGlow-400 text-right"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-cyanGlow-400 focus:ring-1 focus:ring-cyanGlow-400 text-right"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                      <label className="block text-xs font-bold text-slate-300 mb-1">
                         اسم الشركة أو النشاط التجاري
                       </label>
                       <input
@@ -232,18 +232,18 @@ export const ContactSection: React.FC = () => {
                         value={formData.brandName}
                         onChange={(e) => setFormData({ ...formData, brandName: e.target.value })}
                         placeholder="اسم متجرك أو علامتك"
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyanGlow-400 focus:ring-1 focus:ring-cyanGlow-400"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-cyanGlow-400 focus:ring-1 focus:ring-cyanGlow-400"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                      <label className="block text-xs font-bold text-slate-300 mb-1">
                         الخدمة المطلوبة
                       </label>
                       <select
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-deep-900 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow-400"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-deep-900 border border-white/15 text-white text-xs sm:text-sm focus:outline-none focus:border-cyanGlow-400"
                       >
                         {SERVICES.map((s) => (
                           <option key={s.id} value={s.title}>
@@ -258,7 +258,7 @@ export const ContactSection: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                    <label className="block text-xs font-bold text-slate-300 mb-1">
                       تفاصيل إضافية عن أهدافك (اختياري)
                     </label>
                     <textarea
@@ -266,19 +266,19 @@ export const ContactSection: React.FC = () => {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="أخبرنا باختصار عن أهدافك التسويقية والميزانية التقريبية..."
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyanGlow-400 focus:ring-1 focus:ring-cyanGlow-400"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-cyanGlow-400 focus:ring-1 focus:ring-cyanGlow-400"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-4 px-6 rounded-2xl text-base font-bold text-white liquid-glass-btn flex items-center justify-center gap-2 shadow-lg"
+                    className="w-full py-3.5 px-5 rounded-2xl text-sm font-bold text-white liquid-glass-btn flex items-center justify-center gap-2 shadow-md"
                   >
                     <Send className="w-4 h-4" />
                     <span>إرسال الطلب عبر واتساب فوراً</span>
                   </button>
 
-                  <div className="flex items-center justify-center gap-4 text-[11px] text-slate-400 pt-2">
+                  <div className="flex items-center justify-center gap-4 text-[11px] text-slate-400 pt-1">
                     <span className="flex items-center gap-1">
                       <Clock className="w-3.5 h-3.5 text-cyanGlow-400" />
                       رد سريع ومباشر 24/7
