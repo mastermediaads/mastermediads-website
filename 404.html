@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - الصفحة غير موجودة | Master Media Ads</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>404 - الصفحة غير موجودة | ماستر ميديا للترويج والإعلان</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;800;900&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#090D16] text-white font-sans flex items-center justify-center min-h-screen p-4 text-center">
-    <div class="max-w-md">
-        <h1 class="text-8xl font-black text-orange-500 mb-4">404</h1>
-        <h2 class="text-2xl font-bold mb-2">عفواً، الصفحة غير موجودة</h2>
-        <p class="text-slate-400 text-sm mb-6">يبدو أن الصفحة التي تبحث عنها قد تم نقلها أو حذفها.</p>
-        <a href="index.html" class="inline-block px-6 py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition">العودة للرئيسية</a>
+<body class="bg-[#030712] text-slate-100 font-sans flex items-center justify-center min-h-screen p-4 text-center relative overflow-hidden">
+    <!-- Ambient Glow -->
+    <div class="absolute w-[500px] h-[500px] bg-cyan-500/15 rounded-full blur-3xl pointer-events-none -top-20 -right-20"></div>
+    <div class="absolute w-[450px] h-[450px] bg-blue-600/20 rounded-full blur-3xl pointer-events-none -bottom-20 -left-20"></div>
+
+    <div class="relative z-10 max-w-md p-8 rounded-3xl bg-white/[0.04] backdrop-blur-2xl border border-white/15 shadow-2xl">
+        <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-tr from-[#0052FF] to-[#00F0FF] flex items-center justify-center shadow-lg shadow-cyan-500/30">
+            <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+        </div>
+        <h1 class="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-300 to-cyan-400 mb-4 font-mono">404</h1>
+        <h2 class="text-2xl font-bold mb-3 text-white">عفواً، الصفحة غير موجودة</h2>
+        <p class="text-slate-300 text-sm mb-8 leading-relaxed">الصفحة التي تبحث عنها غير موجودة أو تم نقلها.</p>
+        <a href="/" class="inline-block px-8 py-3.5 rounded-full bg-gradient-to-r from-[#0066FF] to-[#00F0FF] text-white font-bold text-sm shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105 transition-all">العودة للرئيسية</a>
     </div>
 </body>
 </html>

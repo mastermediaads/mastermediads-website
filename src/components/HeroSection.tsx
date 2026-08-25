@@ -1,6 +1,7 @@
 import React from 'react';
-import { ArrowLeft, Sparkles, TrendingUp, Users, Target, ShieldCheck, Zap } from 'lucide-react';
-import { SOCIAL_PLATFORMS } from '../data/content';
+import { AGENCY_INFO, PLATFORMS_LIST } from '../data/content';
+import { Logo } from './Logo';
+import { ArrowLeft, Sparkles, Video, Megaphone, TrendingUp, Play, Eye, Flame, CheckCircle2 } from 'lucide-react';
 
 interface HeroSectionProps {
   onOpenContact: () => void;
@@ -8,222 +9,191 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
   return (
-    <section id="hero" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-cyan-50/50 via-white to-white">
-      {/* Background Subtle Cyan Blobs */}
-      <div className="cyan-blob w-96 h-96 -top-20 -right-20 bg-cyan-200/50 rounded-full" />
-      <div className="cyan-blob w-80 h-80 top-1/2 -left-24 bg-teal-200/40 rounded-full" />
+    <section
+      id="hero"
+      className="relative min-h-[92vh] pt-32 pb-20 md:pt-40 md:pb-28 flex items-center justify-center overflow-hidden"
+    >
+      {/* 1. Dynamic Ambient Glowing Light Blobs */}
+      <div className="ambient-glow-orb ambient-cyan w-[500px] h-[500px] -top-24 -right-24 animate-pulse-glow" />
+      <div className="ambient-glow-orb ambient-blue w-[600px] h-[600px] top-1/3 -left-32 animate-float-slow" />
+      <div className="ambient-glow-orb ambient-cyan w-[400px] h-[400px] -bottom-20 right-1/4 animate-float-reverse" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* 2. Massive Watermark Background Geometric Glyph */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] sm:w-[900px] sm:h-[900px] pointer-events-none opacity-[0.035] select-none -z-0">
+        <Logo variant="mark" size="custom" className="w-full h-full" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Right Column: Hero Content (RTL) */}
-          <div className="lg:col-span-7 text-center lg:text-right space-y-6">
+          {/* Right Column: Hero Typography & Actions (RTL) */}
+          <div className="lg:col-span-7 text-center lg:text-right space-y-6 sm:space-y-8">
             
-            {/* Agency Badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-cyan-50 border border-cyan-200/80 text-cyan-800 text-xs sm:text-sm font-bold shadow-sm">
-              <span className="flex h-2.5 w-2.5 rounded-full bg-cyan-500 animate-ping" />
-              <Sparkles className="w-4 h-4 text-cyan-600" />
-              <span>وكالة رائدة في التسويق والإعلانات الرقمية</span>
+            {/* Top Identity Badge */}
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full liquid-glass-card border-cyanGlow-500/30 text-cyanGlow-300 text-xs sm:text-sm font-bold shadow-cyan-glow/20">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyanGlow-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyanGlow-500"></span>
+              </span>
+              <Sparkles className="w-4 h-4 text-cyanGlow-400" />
+              <span>وكالة إعلانية وإنتاج إعلامي بهوية رقمية متقدمة</span>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.25] font-heading">
-              الترويج الرقمي{' '}
-              <span className="relative inline-block">
-                <span className="cyan-gradient-text">مفتاح نجاح</span>
-                <svg
-                  className="absolute -bottom-2 right-0 w-full h-3 text-cyan-400/40"
-                  viewBox="0 0 100 12"
-                  preserveAspectRatio="none"
-                >
-                  <path d="M0,8 Q50,0 100,8" stroke="currentColor" strokeWidth="4" fill="none" />
-                </svg>
-              </span>{' '}
-              أعمالك
-            </h1>
+            {/* Brand Headline */}
+            <div className="space-y-3">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.18] font-heading">
+                {AGENCY_INFO.name}
+              </h1>
 
-            {/* Supporting Subtitle */}
-            <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-              في عالم اليوم، حضورك على منصات التواصل الاجتماعي لم يعد خيارًا، بل ضرورة. في <strong className="text-slate-800 font-semibold">ماستر ميديا للإعلان</strong> نساعدك على الوصول إلى جمهورك المستهدف وتحقيق نمو حقيقي ومستدام.
+              {/* Inspiring Tagline */}
+              <p className="text-xl sm:text-2xl lg:text-3xl font-bold cyan-gradient-text font-heading leading-relaxed">
+                {AGENCY_INFO.tagline}
+              </p>
+            </div>
+
+            {/* Concise Mission Description */}
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+              {AGENCY_INFO.description}
             </p>
 
-            {/* Action Buttons */}
+            {/* Dual Liquid Glass Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+              {/* Primary Button: Discover Services */}
               <a
                 href="#services"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-base font-bold text-white bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all transform hover:-translate-y-0.5"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-base font-bold text-white liquid-glass-btn group"
               >
-                <span>استكشف خدماتنا</span>
-                <ArrowLeft className="w-5 h-5" />
+                <span>اكتشف خدماتنا</span>
+                <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
               </a>
 
+              {/* Secondary Button: Contact Us */}
               <button
                 onClick={onOpenContact}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-base font-bold text-slate-700 bg-white border border-slate-200 hover:border-cyan-400 hover:text-cyan-600 hover:bg-cyan-50/40 shadow-sm transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-base font-bold text-slate-200 hover:text-white liquid-glass-btn-secondary group"
               >
                 <span>تواصل معنا</span>
-                <Zap className="w-5 h-5 text-cyan-500" />
+                <Sparkles className="w-4 h-4 text-cyanGlow-400 transition-transform group-hover:scale-110" />
               </button>
             </div>
 
-            {/* Trust Highlights Snippet */}
-            <div className="pt-6 border-t border-slate-100 grid grid-cols-3 gap-4 max-w-xl mx-auto lg:mx-0">
-              <div className="flex items-center gap-2 text-right">
-                <div className="w-8 h-8 rounded-lg bg-cyan-50 text-cyan-600 flex items-center justify-center shrink-0">
-                  <Target className="w-4 h-4" />
+            {/* Quick Guarantees / Pillars */}
+            <div className="pt-6 border-t border-white/10 grid grid-cols-3 gap-3 sm:gap-4 max-w-xl mx-auto lg:mx-0">
+              <div className="text-right">
+                <div className="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-white">
+                  <Video className="w-4 h-4 text-cyanGlow-400 shrink-0" />
+                  <span>تصوير سينمائي</span>
                 </div>
-                <div>
-                  <p className="text-xs text-slate-500">استهداف</p>
-                  <p className="text-xs sm:text-sm font-bold text-slate-800">دقيق ومخصص</p>
-                </div>
+                <p className="text-[11px] sm:text-xs text-slate-400 mt-0.5">إنتاج فيديو عالي الجودة</p>
               </div>
 
-              <div className="flex items-center gap-2 text-right">
-                <div className="w-8 h-8 rounded-lg bg-cyan-50 text-cyan-600 flex items-center justify-center shrink-0">
-                  <TrendingUp className="w-4 h-4" />
+              <div className="text-right">
+                <div className="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-white">
+                  <Megaphone className="w-4 h-4 text-cyanGlow-400 shrink-0" />
+                  <span>ترويج مستهدف</span>
                 </div>
-                <div>
-                  <p className="text-xs text-slate-500">عائد استثمار</p>
-                  <p className="text-xs sm:text-sm font-bold text-slate-800">مضاعف وسريع</p>
-                </div>
+                <p className="text-[11px] sm:text-xs text-slate-400 mt-0.5">حملات مدروسة بدقة</p>
               </div>
 
-              <div className="flex items-center gap-2 text-right">
-                <div className="w-8 h-8 rounded-lg bg-cyan-50 text-cyan-600 flex items-center justify-center shrink-0">
-                  <ShieldCheck className="w-4 h-4" />
+              <div className="text-right">
+                <div className="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-white">
+                  <TrendingUp className="w-4 h-4 text-cyanGlow-400 shrink-0" />
+                  <span>عائد حقيقي</span>
                 </div>
-                <div>
-                  <p className="text-xs text-slate-500">شفافية</p>
-                  <p className="text-xs sm:text-sm font-bold text-slate-800">تقارير مباشرة</p>
-                </div>
+                <p className="text-[11px] sm:text-xs text-slate-400 mt-0.5">مضاعفة مبيعات وتفاعل</p>
               </div>
             </div>
 
           </div>
 
-          {/* Left Column: Visual Showcase (Smartphone & Analytics with Floating Badges) */}
+          {/* Left Column: Visual Showcase (Liquid Glass 3D Deck & Dynamic Metrics) */}
           <div className="lg:col-span-5 relative flex items-center justify-center">
             
-            {/* Visual Container */}
-            <div className="relative w-full max-w-md mx-auto">
-              
-              {/* Main Smartphone Mockup Container */}
-              <div className="relative mx-auto w-[280px] sm:w-[310px] h-[580px] bg-slate-900 rounded-[44px] p-3 shadow-2xl shadow-cyan-900/20 ring-1 ring-slate-800/80 animate-float">
-                {/* Speaker & Notch */}
-                <div className="absolute top-6 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-30 flex items-center justify-center">
-                  <div className="w-12 h-1 bg-slate-800 rounded-full" />
-                </div>
+            {/* Ambient Backlight for Mockup */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-electric-600/30 via-cyanGlow-500/20 to-transparent rounded-3xl blur-3xl" />
 
-                {/* Smartphone Screen */}
-                <div className="w-full h-full bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 rounded-[36px] overflow-hidden p-4 pt-10 text-white relative flex flex-col justify-between border border-slate-700/50">
-                  
-                  {/* Top Stats Header */}
+            {/* Main Interactive Liquid Glass Showcase Card */}
+            <div className="relative w-full max-w-md liquid-glass-card rounded-3xl p-6 sm:p-7 border border-white/20 shadow-2xl animate-float-slow">
+              
+              {/* Header inside Card */}
+              <div className="flex items-center justify-between pb-5 border-b border-white/10">
+                <div className="flex items-center gap-3">
+                  <Logo variant="badge" size="sm" />
                   <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-2">
-                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                        <span className="text-[11px] font-semibold text-slate-300">حملة نشطة ومباشرة</span>
-                      </div>
-                      <span className="text-[10px] bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded-full font-mono font-bold">
-                        LIVE
-                      </span>
-                    </div>
+                    <h3 className="text-sm font-bold text-white font-heading">
+                      ماستر ميديا
+                    </h3>
+                    <p className="text-[11px] text-cyanGlow-400 font-mono">
+                      LIVE CAMPAIGN PERFORMANCE
+                    </p>
+                  </div>
+                </div>
+                <span className="px-2.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-[10px] font-bold flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  حملات نشطة
+                </span>
+              </div>
 
-                    <div className="bg-slate-800/80 backdrop-blur-md rounded-2xl p-3.5 border border-slate-700/60 mb-3">
-                      <p className="text-xs text-slate-400 mb-1 font-medium">إجمالي الوصول والظهور</p>
-                      <div className="flex items-baseline justify-between">
-                        <span className="text-2xl font-black text-white font-mono tracking-tight">184,920</span>
-                        <span className="text-xs font-bold text-emerald-400 flex items-center gap-0.5">
-                          <TrendingUp className="w-3.5 h-3.5" />
-                          +318%
-                        </span>
-                      </div>
-                      <div className="mt-2.5 h-2 bg-slate-700/60 rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-cyan-400 to-teal-400 rounded-full w-[82%]" />
-                      </div>
+              {/* Interactive Video Production Showcase Widget */}
+              <div className="mt-5 relative rounded-2xl overflow-hidden bg-gradient-to-tr from-deep-900 via-deep-850 to-deep-800 border border-white/10 p-4">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-lg bg-electric-600/30 border border-electric-500/40 text-cyanGlow-300 flex items-center justify-center">
+                      <Play className="w-4 h-4 text-cyanGlow-400 fill-cyanGlow-400" />
                     </div>
-
-                    {/* Mini Analytics Chart Simulation */}
-                    <div className="bg-slate-800/80 backdrop-blur-md rounded-2xl p-3.5 border border-slate-700/60 mb-3">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-semibold text-slate-300">معدل التحويل والمبيعات</span>
-                        <span className="text-xs font-bold text-cyan-400 font-mono">4.9x ROI</span>
-                      </div>
-                      {/* Bar Chart Simulation */}
-                      <div className="h-16 flex items-end gap-1.5 justify-between pt-2">
-                        <div className="w-full bg-slate-700 rounded-t h-[30%]" />
-                        <div className="w-full bg-slate-700 rounded-t h-[45%]" />
-                        <div className="w-full bg-cyan-700 rounded-t h-[60%]" />
-                        <div className="w-full bg-cyan-600 rounded-t h-[75%]" />
-                        <div className="w-full bg-cyan-500 rounded-t h-[90%]" />
-                        <div className="w-full bg-gradient-to-t from-cyan-500 to-teal-300 rounded-t h-[100%]" />
-                      </div>
+                    <div>
+                      <p className="text-xs font-bold text-white">إعلان فيديو ريلز وسوشيال</p>
+                      <p className="text-[10px] text-slate-400">Cinematic 4K UGC Production</p>
                     </div>
                   </div>
+                  <span className="text-xs font-mono font-bold text-cyanGlow-300 bg-cyanGlow-950/60 px-2 py-0.5 rounded border border-cyanGlow-800">
+                    +4.8x ROI
+                  </span>
+                </div>
 
-                  {/* Bottom Campaign Status Card */}
-                  <div className="bg-cyan-950/70 border border-cyan-500/30 rounded-2xl p-3 flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-cyan-500 text-slate-950 flex items-center justify-center shrink-0 font-bold">
-                      <Sparkles className="w-5 h-5 text-white" />
-                    </div>
-                    <div className="text-right">
-                      <p className="text-[11px] font-bold text-white">ماستر ميديا للإعلان</p>
-                      <p className="text-[10px] text-cyan-300">تحقيق أقصى وصول بأعلى عائد</p>
-                    </div>
+                {/* Progress Visual Bar */}
+                <div className="space-y-1.5 mt-3">
+                  <div className="flex justify-between text-[11px]">
+                    <span className="text-slate-300">معدل المشاهدات والتفاعل</span>
+                    <span className="text-cyanGlow-300 font-bold font-mono">94.2%</span>
+                  </div>
+                  <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                    <div
+                      className="h-full rounded-full bg-gradient-to-r from-electric-600 via-cyanGlow-500 to-cyanGlow-300"
+                      style={{ width: '94%' }}
+                    />
                   </div>
                 </div>
               </div>
 
-              {/* Floating Social Media Badges */}
-              
-              {/* Instagram Badge */}
-              <div className="absolute -top-4 -right-6 sm:-right-8 bg-white/95 backdrop-blur-md border border-slate-200/80 rounded-2xl p-2.5 sm:p-3 shadow-lg flex items-center gap-2.5 animate-float-slow z-20">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 flex items-center justify-center text-white shadow-sm">
-                  <span className="text-xs font-bold font-sans">IG</span>
+              {/* Dynamic Stats Row */}
+              <div className="grid grid-cols-2 gap-3 mt-4">
+                <div className="rounded-xl bg-white/[0.04] border border-white/10 p-3.5 text-right">
+                  <div className="flex items-center gap-1.5 text-slate-400 text-xs mb-1">
+                    <Eye className="w-3.5 h-3.5 text-cyanGlow-400" />
+                    <span>الوصول الشهري</span>
+                  </div>
+                  <div className="text-xl font-black text-white font-mono">+1.8M</div>
+                  <span className="text-[10px] text-emerald-400 font-semibold">↑ نمو سريع للجمهور</span>
                 </div>
-                <div className="text-right">
-                  <p className="text-[11px] font-bold text-slate-800">Instagram</p>
-                  <p className="text-[10px] text-cyan-600 font-semibold">+45K تفاعل</p>
+
+                <div className="rounded-xl bg-white/[0.04] border border-white/10 p-3.5 text-right">
+                  <div className="flex items-center gap-1.5 text-slate-400 text-xs mb-1">
+                    <Flame className="w-3.5 h-3.5 text-cyanGlow-400" />
+                    <span>التحويل والطلبات</span>
+                  </div>
+                  <div className="text-xl font-black text-cyanGlow-300 font-mono">+340%</div>
+                  <span className="text-[10px] text-cyanGlow-400 font-semibold">استهداف موجه 100%</span>
                 </div>
               </div>
 
-              {/* TikTok Badge */}
-              <div className="absolute top-1/4 -left-6 sm:-left-10 bg-white/95 backdrop-blur-md border border-slate-200/80 rounded-2xl p-2.5 sm:p-3 shadow-lg flex items-center gap-2.5 animate-float-reverse z-20">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-slate-900 flex items-center justify-center text-white shadow-sm">
-                  <span className="text-xs font-bold text-cyan-400">TT</span>
-                </div>
-                <div className="text-right">
-                  <p className="text-[11px] font-bold text-slate-800">TikTok Ads</p>
-                  <p className="text-[10px] text-cyan-600 font-semibold">+1.2M مشاهدة</p>
-                </div>
-              </div>
-
-              {/* Snapchat Badge */}
-              <div className="absolute top-2/3 -right-6 sm:-right-10 bg-white/95 backdrop-blur-md border border-slate-200/80 rounded-2xl p-2.5 sm:p-3 shadow-lg flex items-center gap-2.5 animate-float z-20">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-amber-400 flex items-center justify-center text-slate-900 shadow-sm font-bold">
-                  <span className="text-xs">👻</span>
-                </div>
-                <div className="text-right">
-                  <p className="text-[11px] font-bold text-slate-800">Snapchat</p>
-                  <p className="text-[10px] text-cyan-600 font-semibold">+80K سحب شاشة</p>
-                </div>
-              </div>
-
-              {/* Facebook & X and YouTube Row Badges (Bottom Overlay) */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] bg-white/95 backdrop-blur-md border border-slate-200/80 rounded-2xl p-3 shadow-xl flex items-center justify-around z-20">
-                <div className="flex items-center gap-1.5">
-                  <div className="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px] font-bold">f</div>
-                  <span className="text-[11px] font-bold text-slate-700">Facebook</span>
-                </div>
-                <div className="h-4 w-px bg-slate-200" />
-                <div className="flex items-center gap-1.5">
-                  <div className="w-6 h-6 rounded-full bg-red-600 text-white flex items-center justify-center text-[9px] font-bold">▶</div>
-                  <span className="text-[11px] font-bold text-slate-700">YouTube</span>
-                </div>
-                <div className="h-4 w-px bg-slate-200" />
-                <div className="flex items-center gap-1.5">
-                  <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-[10px] font-bold">𝕏</div>
-                  <span className="text-[11px] font-bold text-slate-700">Platform</span>
+              {/* Platforms Floating Mini-Pills */}
+              <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-300">
+                <span className="text-[11px] text-slate-400">المنصات المدعومة:</span>
+                <div className="flex items-center gap-2">
+                  <span className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[10px] font-bold text-white">Instagram</span>
+                  <span className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[10px] font-bold text-white">TikTok</span>
+                  <span className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[10px] font-bold text-white">Snapchat</span>
                 </div>
               </div>
 

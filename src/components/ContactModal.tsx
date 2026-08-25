@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Send, CheckCircle2, Phone, Mail, MapPin, Sparkles, Clock, MessageSquare } from 'lucide-react';
+import { X, Send, CheckCircle2, MessageCircle, Sparkles, Clock } from 'lucide-react';
 import { AGENCY_INFO, SERVICES } from '../data/content';
 import confetti from 'canvas-confetti';
 
@@ -13,18 +13,16 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    email: '',
     service: defaultService || SERVICES[0].title,
-    budget: '5,000 - 15,000 ريال',
+    brandName: '',
     details: '',
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     if (defaultService) {
-      setFormData(prev => ({ ...prev, service: defaultService }));
+      setFormData((prev) => ({ ...prev, service: defaultService }));
     }
   }, [defaultService]);
 
@@ -32,18 +30,27 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setIsSubmitted(true);
+
+    confetti({
+      particleCount: 120,
+      spread: 80,
+      origin: { y: 0.5 },
+      colors: ['#00F0FF', '#0066FF', '#38BDF8', '#10B981']
+    });
+
+    const waMessage = encodeURIComponent(
+      `*طلب استشارة من موقع ماستر ميديا للترويج والإعلان:*\n\n` +
+      `👤 *الاسم:* ${formData.name}\n` +
+      `📱 *رقم الجوال:* ${formData.phone}\n` +
+      `🏢 *النشاط:* ${formData.brandName || 'غير محدد'}\n` +
+      `🎯 *الخدمة:* ${formData.service}\n` +
+      `📝 *التفاصيل:* ${formData.details || 'طلب استشارة ومناقشة الخطة'}`
+    );
 
     setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      confetti({
-        particleCount: 120,
-        spread: 80,
-        origin: { y: 0.5 },
-        colors: ['#06b6d4', '#0891b2', '#2dd4bf', '#10b981']
-      });
-    }, 800);
+      window.open(`${AGENCY_INFO.whatsappUrl}?text=${waMessage}`, '_blank');
+    }, 700);
   };
 
   const handleReset = () => {
@@ -52,35 +59,35 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-md overflow-y-auto animate-fadeIn">
-      <div className="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-10 relative shadow-2xl border border-slate-100 my-8">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-xl overflow-y-auto animate-fadeIn">
+      <div className="liquid-glass-card rounded-3xl max-w-xl w-full p-6 sm:p-10 relative border border-white/20 shadow-2xl my-8">
         
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 left-5 p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
+          className="absolute top-5 left-5 p-2 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
           aria-label="إغلاق"
         >
-          <X className="w-6 h-6" />
+          <X className="w-5 h-5" />
         </button>
 
         {isSubmitted ? (
           <div className="text-center py-8 space-y-4">
-            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto mb-4">
               <CheckCircle2 className="w-10 h-10" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 font-heading">
+            <h3 className="text-2xl font-bold text-white font-heading">
               تم استلام طلبك بنجاح!
             </h3>
-            <p className="text-slate-600 text-sm sm:text-base max-w-md mx-auto leading-relaxed">
-              شكرًا لاهتمامك بـ <strong className="text-slate-800">ماستر ميديا للإعلان</strong>. سيقوم أحد مستشارينا بالتواصل معك عبر الواتساب أو الهاتف خلال أقل من 24 ساعة لمناقشة خطة نمو أعمالك.
+            <p className="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
+              شكرًا لتواصلك مع <strong className="text-white">ماستر ميديا للترويج والإعلان</strong>. جاري نقلك لمحادثة الواتساب للمتابعة المباشرة.
             </p>
-            <div className="pt-6">
+            <div className="pt-4">
               <button
                 onClick={handleReset}
-                className="px-8 py-3 rounded-xl bg-cyan-600 text-white font-bold text-sm hover:bg-cyan-700 transition-colors shadow-md shadow-cyan-600/20"
+                className="px-8 py-3 rounded-xl text-sm font-bold text-white liquid-glass-btn"
               >
-                تم، شكرًا لكم
+                تم، شكراً لكم
               </button>
             </div>
           </div>
@@ -88,15 +95,15 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
           <div>
             {/* Modal Header */}
             <div className="text-right mb-6">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-bold mb-2">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-cyanGlow-300 text-xs font-bold mb-2">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>طلب استشارة وعرض سعر</span>
+                <span>طلب استشارة تسويقية</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
+              <h3 className="text-2xl sm:text-3xl font-black text-white font-heading">
                 ابدأ مشروعك مع ماستر ميديا
               </h3>
-              <p className="text-slate-600 text-xs sm:text-sm mt-1">
-                املأ النموذج أدناه وسنعد لك خطة تسويقية مبدئية تناسب أهدافك وميزانيتك.
+              <p className="text-slate-300 text-xs sm:text-sm mt-1">
+                املأ النموذج وسنقوم بإعداد خطة مبدئية تناسب أهدافك.
               </p>
             </div>
 
@@ -104,110 +111,100 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
             <form onSubmit={handleSubmit} className="space-y-4 text-right">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                    الاسم الكامل / اسم الشركة *
+                  <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                    الاسم الكريم *
                   </label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="مثال: عبدالله التميمي"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100 text-sm"
+                    placeholder="مثال: أحمد محمد"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyanGlow-400"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                    رقم الجوال / الواتساب *
+                  <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                    رقم الجوال / واتساب *
                   </label>
                   <input
                     type="tel"
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="05XXXXXXXX"
+                    placeholder="077XXXXXXXX"
                     dir="ltr"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100 text-sm text-right"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyanGlow-400 text-right"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                  <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                    اسم الشركة أو المتجر
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.brandName}
+                    onChange={(e) => setFormData({ ...formData, brandName: e.target.value })}
+                    placeholder="اسم مشروعك"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyanGlow-400"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-slate-300 mb-1.5">
                     الخدمة المطلوبة
                   </label>
                   <select
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100 text-sm bg-white"
+                    className="w-full px-4 py-3 rounded-xl bg-deep-900 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow-400"
                   >
                     {SERVICES.map((s) => (
-                      <option key={s.id} value={s.title}>{s.title}</option>
+                      <option key={s.id} value={s.title}>
+                        {s.title}
+                      </option>
                     ))}
-                    <option value="باقة تسويقية شاملة">باقة تسويقية شاملة</option>
-                    <option value="استشارة تسويقية مخصصة">استشارة تسويقية مخصصة</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                    الميزانية الإعلانية المتوقعة
-                  </label>
-                  <select
-                    value={formData.budget}
-                    onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100 text-sm bg-white"
-                  >
-                    <option value="أقل من 5,000 ريال">أقل من 5,000 ريال</option>
-                    <option value="5,000 - 15,000 ريال">5,000 - 15,000 ريال</option>
-                    <option value="15,000 - 50,000 ريال">15,000 - 50,000 ريال</option>
-                    <option value="+50,000 ريال">+50,000 ريال</option>
+                    <option value="باقة الإنتاج والترويج المتكاملة">
+                      باقة الإنتاج والترويج المتكاملة
+                    </option>
                   </select>
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                  تفاصيل المشروع أو الرابط (اختياري)
+                <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                  تفاصيل إضافية (اختياري)
                 </label>
                 <textarea
                   rows={3}
                   value={formData.details}
                   onChange={(e) => setFormData({ ...formData, details: e.target.value })}
-                  placeholder="أخبرنا باختصار عن نشاطك وأهدافك التسويقية..."
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100 text-sm"
+                  placeholder="أخبرنا باختصار عن أهدافك وميزانيتك..."
+                  className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyanGlow-400"
                 />
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-bold text-base shadow-lg shadow-cyan-500/25 transition-all flex items-center justify-center gap-2"
+                  className="w-full py-4 px-6 rounded-2xl text-base font-bold text-white liquid-glass-btn flex items-center justify-center gap-2"
                 >
-                  {isSubmitting ? (
-                    <span className="flex items-center gap-2">
-                      <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                      جاري الإرسال...
-                    </span>
-                  ) : (
-                    <>
-                      <span>إرسال الطلب وحجز الاستشارة</span>
-                      <Send className="w-4 h-4" />
-                    </>
-                  )}
+                  <MessageCircle className="w-4 h-4" />
+                  <span>إرسال الطلب والمتابعة عبر واتساب</span>
                 </button>
               </div>
 
               <div className="flex items-center justify-center gap-4 text-[11px] text-slate-400 pt-2">
                 <span className="flex items-center gap-1">
-                  <Clock className="w-3.5 h-3.5 text-cyan-600" />
-                  رد سريع خلال ساعات العمل
+                  <Clock className="w-3.5 h-3.5 text-cyanGlow-400" />
+                  مستشارنا متاح 24/7
                 </span>
                 <span>•</span>
-                <span>سرية تامة لبيانات مشروعك</span>
+                <span>سرية تامة للمعلومات</span>
               </div>
             </form>
           </div>

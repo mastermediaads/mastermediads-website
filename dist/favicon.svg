@@ -1,6 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="16" fill="#ffffff" stroke="#06b6d4" stroke-width="2"/>
-  <circle cx="32" cy="32" r="22" fill="#ecfeff" stroke="#0891b2" stroke-width="2" stroke-dasharray="3 3"/>
-  <path d="M22 42V22L32 34L42 22V42" stroke="#0891b2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="32" cy="16" r="3" fill="#06b6d4" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#0052FF"/>
+      <stop offset="50%" stopColor="#0066FF"/>
+      <stop offset="100%" stopColor="#00F0FF"/>
+    </linearGradient>
+    <linearGradient id="markGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FFFFFF"/>
+      <stop offset="100%" stopColor="#E0F2FE"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="url(#favGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+  <path d="M22 76V32L36 24V68L22 76Z" fill="url(#markGrad)"/>
+  <path d="M36 24L50 48L36 68V24Z" fill="url(#markGrad)" fill-opacity="0.9"/>
+  <path d="M64 24L50 48L64 68V24Z" fill="url(#markGrad)" fill-opacity="0.95"/>
+  <path d="M78 76V32L64 24V68L78 76Z" fill="url(#markGrad)"/>
+  <path d="M50 16L56 24L50 32L44 24L50 16Z" fill="#00F0FF"/>
 </svg>
