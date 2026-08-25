@@ -67,22 +67,22 @@ export const CalculatorSection: React.FC = () => {
         
         {/* Header (Right Aligned) */}
         <div className="text-right max-w-2xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full liquid-glass-card border-cyanGlow-500/30 text-cyanGlow-300 text-xs font-bold mb-3">
-            <Calculator className="w-3.5 h-3.5 text-cyanGlow-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full liquid-glass-card border-cyanGlow-500/30 text-cyanGlow-700 dark:text-cyanGlow-300 text-xs font-bold mb-3">
+            <Calculator className="w-3.5 h-3.5 text-cyanGlow-500 dark:text-cyanGlow-400" />
             <span>حاسبة العائد التقديرية التفاعلية</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-black text-white font-heading mb-2">
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white font-heading mb-2">
             قدّر نتائج حملتك الإعلانية القادمة
           </h2>
 
-          <p className="text-xs sm:text-sm text-slate-300">
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
             حدد الميزانية التقريبية والمنصة لتشاهد التقديرات المبدئية لحجم الظهور والنقرات والعملاء.
           </p>
         </div>
 
         {/* Liquid Glass Calculator Container */}
-        <div className="liquid-glass-card rounded-3xl p-6 sm:p-9 lg:p-10 border border-white/20 shadow-xl">
+        <div className="liquid-glass-card rounded-3xl p-6 sm:p-9 lg:p-10 border border-slate-200/80 dark:border-white/20 shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Left Inputs */}
@@ -91,8 +91,8 @@ export const CalculatorSection: React.FC = () => {
               {/* Budget Range Slider */}
               <div>
                 <div className="flex justify-between items-center mb-2.5">
-                  <label htmlFor={budgetSliderId} className="text-xs sm:text-sm font-bold text-white">الميزانية الإعلانية المتوقعة شهرياً:</label>
-                  <span className="text-lg sm:text-xl font-black text-cyanGlow-300 bg-white/5 border border-white/10 px-3 py-0.5 rounded-xl font-mono">
+                  <label htmlFor={budgetSliderId} className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">الميزانية الإعلانية المتوقعة شهرياً:</label>
+                  <span className="text-lg sm:text-xl font-black text-electric-600 dark:text-cyanGlow-300 bg-slate-200/60 dark:bg-white/5 border border-slate-300/80 dark:border-white/10 px-3 py-0.5 rounded-xl font-mono">
                     ${budget.toLocaleString()}
                   </span>
                 </div>
@@ -105,10 +105,10 @@ export const CalculatorSection: React.FC = () => {
                   step={100}
                   value={budget}
                   onChange={(e) => setBudget(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyanGlow-400"
+                  className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-electric-600 dark:accent-cyanGlow-400"
                 />
 
-                <div className="flex justify-between text-[11px] text-slate-400 mt-1.5 font-mono">
+                <div className="flex justify-between text-[11px] text-slate-500 dark:text-slate-400 mt-1.5 font-mono">
                   <span>$300</span>
                   <span>$5,000</span>
                   <span>$10,000+</span>
@@ -117,7 +117,7 @@ export const CalculatorSection: React.FC = () => {
 
               {/* Platform Selector Buttons */}
               <div>
-                <label className="text-xs sm:text-sm font-bold text-white block mb-2.5">المنصة المستهدفة:</label>
+                <label className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white block mb-2.5">المنصة المستهدفة:</label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {(['tiktok', 'meta', 'google', 'snap'] as const).map((p) => {
                     const isActive = platform === p;
@@ -128,8 +128,8 @@ export const CalculatorSection: React.FC = () => {
                         onClick={() => setPlatform(p)}
                         className={`p-2.5 rounded-xl border text-xs font-bold transition-all flex flex-col items-center gap-1 ${
                           isActive
-                            ? 'bg-gradient-to-tr from-electric-600/60 to-cyanGlow-600/60 border-cyanGlow-400 text-white shadow-cyan-glow/20'
-                            : 'bg-white/[0.03] border-white/10 text-slate-300 hover:border-white/20'
+                            ? 'bg-gradient-to-tr from-electric-600 to-cyanGlow-600 border-transparent text-white shadow-md shadow-cyan-500/20'
+                            : 'bg-slate-100/80 dark:bg-white/[0.03] border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:border-electric-400/50'
                         }`}
                       >
                         <span className="text-sm">{platformData[p].icon}</span>
@@ -142,12 +142,12 @@ export const CalculatorSection: React.FC = () => {
 
               {/* Goal Select */}
               <div>
-                <label htmlFor={campaignGoalId} className="text-xs sm:text-sm font-bold text-white block mb-1.5">الهدف الرئيسي من الحملة:</label>
+                <label htmlFor={campaignGoalId} className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white block mb-1.5">الهدف الرئيسي من الحملة:</label>
                 <select
                   id={campaignGoalId}
                   value={goal}
                   onChange={(e) => setGoal(e.target.value as any)}
-                  className="w-full bg-deep-900 border border-white/15 text-white rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-cyanGlow-400"
+                  className="w-full bg-slate-100 dark:bg-deep-900 border border-slate-300/80 dark:border-white/15 text-slate-900 dark:text-white rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-electric-500 dark:focus:border-cyanGlow-400"
                 >
                   <option value="sales">زيادة المبيعات المباشرة للمنتج أو الخدمة</option>
                   <option value="leads">توليد العملاء المحتملين والتواصل المباشر</option>
@@ -158,28 +158,28 @@ export const CalculatorSection: React.FC = () => {
             </div>
 
             {/* Right Result Card */}
-            <div className="lg:col-span-5 rounded-2xl bg-gradient-to-br from-electric-900/90 via-deep-900/90 to-deep-950 p-5 sm:p-6 border border-cyanGlow-400/40 text-center shadow-lg relative overflow-hidden">
+            <div className="lg:col-span-5 rounded-2xl bg-gradient-to-br from-electric-800 via-deep-850 to-deep-950 p-5 sm:p-6 border border-cyanGlow-400/40 text-center shadow-lg relative overflow-hidden text-white">
               <div className="text-[11px] uppercase tracking-wider text-cyanGlow-300 font-bold mb-3 flex items-center justify-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5 text-cyanGlow-400" />
                 <span>النتائج التقديرية المتوقعة</span>
               </div>
 
               <div className="space-y-2.5 mb-5">
-                <div className="bg-white/[0.05] p-2.5 rounded-xl border border-white/10 text-right">
+                <div className="bg-white/[0.08] p-2.5 rounded-xl border border-white/15 text-right">
                   <div className="text-[11px] text-slate-300">الوصول والظهور المتوقع (Impressions)</div>
                   <div className="text-lg sm:text-xl font-black text-white font-mono">
                     {estImpressionsMin.toLocaleString()} - {estImpressionsMax.toLocaleString()}
                   </div>
                 </div>
 
-                <div className="bg-white/[0.05] p-2.5 rounded-xl border border-white/10 text-right">
+                <div className="bg-white/[0.08] p-2.5 rounded-xl border border-white/15 text-right">
                   <div className="text-[11px] text-slate-300">النقرات والزيارات المستهدفة (Clicks)</div>
                   <div className="text-lg sm:text-xl font-black text-cyanGlow-300 font-mono">
                     {estClicksMin.toLocaleString()} - {estClicksMax.toLocaleString()}
                   </div>
                 </div>
 
-                <div className="bg-white/[0.05] p-2.5 rounded-xl border border-white/10 text-right">
+                <div className="bg-white/[0.08] p-2.5 rounded-xl border border-white/15 text-right">
                   <div className="text-[11px] text-slate-300">الطلبات أو العملاء المحتملين المتوقعين</div>
                   <div className="text-lg sm:text-xl font-black text-white font-mono">
                     {conversionsMin} - {conversionsMax} {unitText}

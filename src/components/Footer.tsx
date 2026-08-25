@@ -29,7 +29,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
   };
 
   return (
-    <footer className="bg-deep-950 text-slate-400 pt-16 pb-10 relative overflow-hidden border-t border-white/10">
+    <footer className="bg-slate-100 dark:bg-deep-950 text-slate-600 dark:text-slate-400 pt-16 pb-10 relative overflow-hidden border-t border-slate-200/80 dark:border-white/10 transition-colors duration-300">
       
       {/* Subtle Ambient Light */}
       <div className="ambient-glow-orb ambient-cyan w-96 h-96 -top-32 right-1/3" />
@@ -37,23 +37,23 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Main Footer Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-12 border-b border-white/10 text-right">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-12 border-b border-slate-200/80 dark:border-white/10 text-right">
           
           {/* Col 1: Brand & Logo (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
               <Logo variant="badge" size="md" />
               <div className="text-right">
-                <h3 className="text-lg font-bold text-white font-heading">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white font-heading">
                   {AGENCY_INFO.name}
                 </h3>
-                <p className="text-[11px] text-cyanGlow-400 font-mono">
+                <p className="text-[11px] text-electric-600 dark:text-cyanGlow-400 font-mono">
                   {AGENCY_INFO.englishName}
                 </p>
               </div>
             </div>
 
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-sm">
+            <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed max-w-sm">
               {AGENCY_INFO.description}
             </p>
 
@@ -63,7 +63,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                 href={AGENCY_INFO.instagram.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/10 hover:border-pink-400/50 hover:bg-pink-500/10 text-slate-300 hover:text-pink-400 transition-all flex items-center justify-center"
+                className="w-9 h-9 rounded-xl bg-slate-200/70 dark:bg-white/[0.04] border border-slate-300/80 dark:border-white/10 hover:border-pink-500/50 hover:bg-pink-500/10 text-slate-700 dark:text-slate-300 hover:text-pink-600 dark:hover:text-pink-400 transition-all flex items-center justify-center"
                 title="Instagram"
                 aria-label="Instagram"
               >
@@ -74,7 +74,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                 href={AGENCY_INFO.facebook.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/10 hover:border-blue-400/50 hover:bg-blue-500/10 text-slate-300 hover:text-blue-400 transition-all flex items-center justify-center"
+                className="w-9 h-9 rounded-xl bg-slate-200/70 dark:bg-white/[0.04] border border-slate-300/80 dark:border-white/10 hover:border-blue-500/50 hover:bg-blue-500/10 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all flex items-center justify-center"
                 title="Facebook"
                 aria-label="Facebook"
               >
@@ -85,7 +85,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                 href={AGENCY_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/10 hover:border-emerald-400/50 hover:bg-emerald-500/10 text-slate-300 hover:text-emerald-400 transition-all flex items-center justify-center"
+                className="w-9 h-9 rounded-xl bg-slate-200/70 dark:bg-white/[0.04] border border-slate-300/80 dark:border-white/10 hover:border-emerald-500/50 hover:bg-emerald-500/10 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all flex items-center justify-center"
                 title="WhatsApp"
                 aria-label="WhatsApp"
               >
@@ -96,7 +96,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
 
           {/* Col 2: Core Services (4 cols) */}
           <div className="lg:col-span-4 space-y-3">
-            <h4 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider font-heading pb-1 border-b border-white/10 inline-block">
+            <h4 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider font-heading pb-1 border-b border-slate-200/80 dark:border-white/10 inline-block">
               خدماتنا
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
@@ -104,9 +104,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
                 <li key={service.id}>
                   <button
                     onClick={() => onOpenContact(service.title)}
-                    className="text-slate-300 hover:text-cyanGlow-300 transition-colors text-right flex items-center gap-2 group"
+                    className="text-slate-600 dark:text-slate-300 hover:text-electric-600 dark:hover:text-cyanGlow-300 transition-colors text-right flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-cyanGlow-400 group-hover:scale-150 transition-transform" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-electric-600 dark:bg-cyanGlow-400 group-hover:scale-150 transition-transform" />
                     <span>{service.title}</span>
                   </button>
                 </li>
@@ -116,18 +116,18 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
 
           {/* Col 3: Direct Contact Information (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider font-heading pb-1 border-b border-white/10 inline-block">
+            <h4 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider font-heading pb-1 border-b border-slate-200/80 dark:border-white/10 inline-block">
               معلومات التواصل
             </h4>
 
-            <div className="space-y-2 text-xs sm:text-sm text-slate-300">
+            <div className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
               <p>
-                <span className="text-slate-400">Instagram:</span>{' '}
+                <span className="text-slate-500 dark:text-slate-400">Instagram:</span>{' '}
                 <a
                   href={AGENCY_INFO.instagram.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-cyanGlow-300 hover:underline font-mono"
+                  className="text-electric-600 dark:text-cyanGlow-300 hover:underline font-mono font-medium"
                   dir="ltr"
                 >
                   {AGENCY_INFO.instagram.handle}
@@ -135,12 +135,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
               </p>
 
               <p>
-                <span className="text-slate-400">Facebook:</span>{' '}
+                <span className="text-slate-500 dark:text-slate-400">Facebook:</span>{' '}
                 <a
                   href={AGENCY_INFO.facebook.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-cyanGlow-300 hover:underline font-mono"
+                  className="text-electric-600 dark:text-cyanGlow-300 hover:underline font-mono font-medium"
                   dir="ltr"
                 >
                   facebook.com/mastermediaads
@@ -148,12 +148,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
               </p>
 
               <p>
-                <span className="text-slate-400">WhatsApp:</span>{' '}
+                <span className="text-slate-500 dark:text-slate-400">WhatsApp:</span>{' '}
                 <a
                   href={AGENCY_INFO.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-emerald-400 hover:underline font-mono"
+                  className="text-emerald-600 dark:text-emerald-400 hover:underline font-mono font-medium"
                   dir="ltr"
                 >
                   {AGENCY_INFO.phoneDisplay}
@@ -165,7 +165,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
         </div>
 
         {/* Bottom Copyright Row */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 dark:text-slate-400">
           <div>
             <p>© {AGENCY_INFO.copyrightYear} Master Media. All Rights Reserved.</p>
           </div>
@@ -176,7 +176,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 hover:border-cyanGlow-400 text-slate-300 hover:text-white transition-colors text-[11px]"
+            className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200/80 dark:bg-white/[0.04] border border-slate-300/80 dark:border-white/10 hover:border-electric-500 dark:hover:border-cyanGlow-400 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors text-[11px]"
           >
             <span>للأعلى</span>
             <ArrowUp className="w-3 h-3" />

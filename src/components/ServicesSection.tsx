@@ -17,16 +17,16 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
         
         {/* Section Header (Arabic Right-Aligned & Refined Heading Size) */}
         <div className="text-right max-w-3xl mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full liquid-glass-card border-cyanGlow-500/30 text-cyanGlow-300 text-xs font-bold mb-3 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-cyanGlow-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full liquid-glass-card border-cyanGlow-500/30 text-cyanGlow-700 dark:text-cyanGlow-300 text-xs font-bold mb-3 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-cyanGlow-500 dark:text-cyanGlow-400" />
             <span>خدماتنا الأساسية المتخصصة</span>
           </div>
           
-          <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight font-heading leading-tight mb-3">
+          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight font-heading leading-tight mb-3">
             خدماتنا
           </h2>
           
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
             نركز على الركيزتين الأهم لنمو أي علامة تجارية: الإنتاج البصري المبهر والترويج الرقمي الموجه بدقة.
           </p>
         </div>
@@ -39,28 +39,28 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
             return (
               <div
                 key={service.id}
-                className="group relative rounded-3xl p-7 sm:p-9 liquid-glass-card border border-white/15 hover:border-cyanGlow-400/40 flex flex-col justify-between overflow-hidden transition-all duration-500 hover:-translate-y-1.5 shadow-xl text-right"
+                className="group relative rounded-3xl p-7 sm:p-9 liquid-glass-card border border-slate-200/80 dark:border-white/15 hover:border-electric-500/50 dark:hover:border-cyanGlow-400/40 flex flex-col justify-between overflow-hidden transition-all duration-500 hover:-translate-y-1.5 shadow-xl text-right"
               >
                 {/* Specular Refraction Light Line */}
                 <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-cyanGlow-400/60 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Ambient Internal Glow on Hover */}
-                <div className="absolute -top-24 -right-24 w-60 h-60 bg-electric-600/20 rounded-full blur-3xl group-hover:bg-cyanGlow-500/30 transition-all duration-500 pointer-events-none" />
+                <div className="absolute -top-24 -right-24 w-60 h-60 bg-electric-600/15 dark:bg-electric-600/20 rounded-full blur-3xl group-hover:bg-cyanGlow-500/25 dark:group-hover:bg-cyanGlow-500/30 transition-all duration-500 pointer-events-none" />
 
                 <div>
                   {/* Top Header Row: Number Badge & Tag */}
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-3xl sm:text-4xl font-black text-white/20 group-hover:text-cyanGlow-400/50 font-mono transition-colors">
+                    <span className="text-3xl sm:text-4xl font-black text-slate-300 dark:text-white/20 group-hover:text-electric-500/60 dark:group-hover:text-cyanGlow-400/50 font-mono transition-colors">
                       {service.number}
                     </span>
 
-                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-white/5 border border-white/10 text-cyanGlow-300 group-hover:bg-cyanGlow-500/20 group-hover:border-cyanGlow-400/40 transition-colors">
+                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-slate-200/60 dark:bg-white/5 border border-slate-300/70 dark:border-white/10 text-electric-700 dark:text-cyanGlow-300 group-hover:bg-cyanGlow-500/20 group-hover:border-cyanGlow-400/40 transition-colors">
                       {service.tag}
                     </span>
                   </div>
 
                   {/* Icon Container with Luminous Treatment */}
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-electric-700/80 to-cyanGlow-600/80 border border-white/30 text-white flex items-center justify-center mb-5 shadow-lg shadow-cyanGlow-500/20 group-hover:scale-105 group-hover:shadow-cyan-glow transition-all duration-300">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-electric-700 to-cyanGlow-600 border border-white/30 text-white flex items-center justify-center mb-5 shadow-lg shadow-cyanGlow-500/20 group-hover:scale-105 group-hover:shadow-cyan-glow transition-all duration-300">
                     {isVideo ? (
                       <Video className="w-7 h-7 text-white" />
                     ) : (
@@ -69,25 +69,25 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                   </div>
 
                   {/* Service Title */}
-                  <h3 className="text-xl sm:text-2xl font-black text-white group-hover:text-cyanGlow-300 transition-colors mb-2.5 font-heading leading-tight">
+                  <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white group-hover:text-electric-600 dark:group-hover:text-cyanGlow-300 transition-colors mb-2.5 font-heading leading-tight">
                     {service.title}
                   </h3>
 
                   {/* Short Subtitle */}
-                  <p className="text-xs sm:text-sm font-semibold text-cyanGlow-400/90 mb-3.5 font-heading">
+                  <p className="text-xs sm:text-sm font-semibold text-electric-600 dark:text-cyanGlow-400/90 mb-3.5 font-heading">
                     {service.subtitle}
                   </p>
 
                   {/* Service Official Description */}
-                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
+                  <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
                     {service.description}
                   </p>
 
                   {/* Detailed Feature Points */}
-                  <div className="space-y-2.5 pt-5 border-t border-white/10 mb-7">
+                  <div className="space-y-2.5 pt-5 border-t border-slate-200/80 dark:border-white/10 mb-7">
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">
-                        <CheckCircle2 className="w-4 h-4 text-cyanGlow-400 shrink-0 mt-0.5" />
+                      <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-200">
+                        <CheckCircle2 className="w-4 h-4 text-electric-600 dark:text-cyanGlow-400 shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </div>
                     ))}
@@ -109,11 +109,11 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
 
         {/* Bottom Quick Action Note */}
         <div className="mt-12 text-right">
-          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full liquid-glass-card border-white/10 text-slate-300 text-xs sm:text-sm">
+          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full liquid-glass-card border-slate-200/80 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs sm:text-sm">
             <span>هل تبحث عن باقة تجمع بين الإنتاج السينمائي والترويج الممول؟</span>
             <button
               onClick={() => onSelectService('باقة الإنتاج والترويج المتكاملة')}
-              className="text-cyanGlow-300 hover:text-white font-bold underline underline-offset-4 transition-colors"
+              className="text-electric-600 dark:text-cyanGlow-300 hover:text-electric-800 dark:hover:text-white font-bold underline underline-offset-4 transition-colors"
             >
               استشرنا الآن مجاناً
             </button>

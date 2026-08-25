@@ -56,7 +56,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-deep-900/60">
+    <section id="contact" className="py-24 relative overflow-hidden bg-slate-100/70 dark:bg-deep-900/60 transition-colors duration-300">
       {/* Background Ambient Glow */}
       <div className="ambient-glow-orb ambient-blue w-[450px] h-[450px] top-10 -right-20" />
       <div className="ambient-glow-orb ambient-cyan w-[350px] h-[350px] -bottom-10 -left-10" />
@@ -65,16 +65,16 @@ export const ContactSection: React.FC = () => {
         
         {/* Section Header (Right-aligned & Refined Heading Size) */}
         <div className="text-right max-w-3xl mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full liquid-glass-card border-cyanGlow-500/30 text-cyanGlow-300 text-xs font-bold mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-cyanGlow-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full liquid-glass-card border-cyanGlow-500/30 text-cyanGlow-700 dark:text-cyanGlow-300 text-xs font-bold mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-cyanGlow-500 dark:text-cyanGlow-400" />
             <span>قنوات التواصل المباشرة</span>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight font-heading leading-tight mb-3">
+          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight font-heading leading-tight mb-3">
             تواصل معنا
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
             يسعدنا مناقشة مشروعك وتقديم استشارة مخصصة تلبي طموحات نمو علامتك التجارية.
           </p>
         </div>
@@ -89,15 +89,15 @@ export const ContactSection: React.FC = () => {
               href={AGENCY_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-2xl liquid-glass-card p-4 sm:p-5 border border-emerald-500/30 hover:border-emerald-400/60 transition-all hover:-translate-y-1 shadow-md"
+              className="group block rounded-2xl liquid-glass-card p-4 sm:p-5 border border-emerald-500/30 hover:border-emerald-500/60 dark:hover:border-emerald-400/60 transition-all hover:-translate-y-1 shadow-md"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/40 group-hover:scale-105 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-emerald-500/15 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/40 group-hover:scale-105 transition-transform">
                   <MessageCircle className="w-6 h-6" />
                 </div>
                 <div className="text-right">
-                  <span className="text-xs text-slate-400 block font-medium">واتساب مباشر (24/7)</span>
-                  <span className="text-base sm:text-lg font-bold text-white font-mono group-hover:text-emerald-300 transition-colors" dir="ltr">
+                  <span className="text-xs text-slate-500 dark:text-slate-400 block font-medium">واتساب مباشر (24/7)</span>
+                  <span className="text-base sm:text-lg font-bold text-slate-900 dark:text-white font-mono group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors" dir="ltr">
                     {AGENCY_INFO.phoneDisplay}
                   </span>
                 </div>
@@ -109,15 +109,15 @@ export const ContactSection: React.FC = () => {
               href={AGENCY_INFO.instagram.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-2xl liquid-glass-card p-4 sm:p-5 border border-pink-500/30 hover:border-pink-400/60 transition-all hover:-translate-y-1 shadow-md"
+              className="group block rounded-2xl liquid-glass-card p-4 sm:p-5 border border-pink-500/30 hover:border-pink-500/60 dark:hover:border-pink-400/60 transition-all hover:-translate-y-1 shadow-md"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center shrink-0 border border-pink-500/40 group-hover:scale-105 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-pink-500/15 dark:bg-pink-500/20 text-pink-600 dark:text-pink-400 flex items-center justify-center shrink-0 border border-pink-500/40 group-hover:scale-105 transition-transform">
                   <InstagramIcon className="w-6 h-6" />
                 </div>
                 <div className="text-right">
-                  <span className="text-xs text-slate-400 block font-medium">إنستغرام الرسمي</span>
-                  <span className="text-base sm:text-lg font-bold text-white font-mono group-hover:text-pink-300 transition-colors" dir="ltr">
+                  <span className="text-xs text-slate-500 dark:text-slate-400 block font-medium">إنستغرام الرسمي</span>
+                  <span className="text-base sm:text-lg font-bold text-slate-900 dark:text-white font-mono group-hover:text-pink-600 dark:group-hover:text-pink-300 transition-colors" dir="ltr">
                     @{AGENCY_INFO.instagram.handle}
                   </span>
                 </div>
@@ -129,15 +129,15 @@ export const ContactSection: React.FC = () => {
               href={AGENCY_INFO.facebook.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-2xl liquid-glass-card p-4 sm:p-5 border border-blue-500/30 hover:border-blue-400/60 transition-all hover:-translate-y-1 shadow-md"
+              className="group block rounded-2xl liquid-glass-card p-4 sm:p-5 border border-blue-500/30 hover:border-blue-500/60 dark:hover:border-blue-400/60 transition-all hover:-translate-y-1 shadow-md"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/40 group-hover:scale-105 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-blue-500/15 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/40 group-hover:scale-105 transition-transform">
                   <FacebookIcon className="w-6 h-6" />
                 </div>
                 <div className="text-right">
-                  <span className="text-xs text-slate-400 block font-medium">صفحة فيسبوك</span>
-                  <span className="text-base sm:text-lg font-bold text-white group-hover:text-blue-300 transition-colors">
+                  <span className="text-xs text-slate-500 dark:text-slate-400 block font-medium">صفحة فيسبوك</span>
+                  <span className="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors">
                     {AGENCY_INFO.facebook.name}
                   </span>
                 </div>
@@ -145,12 +145,12 @@ export const ContactSection: React.FC = () => {
             </a>
 
             {/* Coverage Area Box */}
-            <div className="rounded-2xl liquid-glass-card p-4 sm:p-5 border border-white/10 text-right">
+            <div className="rounded-2xl liquid-glass-card p-4 sm:p-5 border border-slate-200/80 dark:border-white/10 text-right">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-cyanGlow-400 shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-electric-600 dark:text-cyanGlow-400 shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-xs text-slate-400 block">نطاق الخدمة</span>
-                  <p className="text-xs sm:text-sm font-bold text-white">{AGENCY_INFO.location}</p>
+                  <span className="text-xs text-slate-500 dark:text-slate-400 block">نطاق الخدمة</span>
+                  <p className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">{AGENCY_INFO.location}</p>
                 </div>
               </div>
             </div>
@@ -159,23 +159,23 @@ export const ContactSection: React.FC = () => {
 
           {/* Quick Consultation Form (7 cols) */}
           <div className="lg:col-span-7">
-            <div className="liquid-glass-card rounded-3xl p-6 sm:p-8 lg:p-9 border border-white/20 shadow-xl relative">
+            <div className="liquid-glass-card rounded-3xl p-6 sm:p-8 lg:p-9 border border-slate-200/80 dark:border-white/20 shadow-xl relative">
               
               {isSubmitted ? (
                 <div className="text-center py-8 space-y-3">
                   <div className="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto mb-3">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-white font-heading">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white font-heading">
                     تم تجهيز طلبك بنجاح!
                   </h3>
-                  <p className="text-slate-300 text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
+                  <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
                     جاري فتح محادثة الواتساب لنقل التفاصيل إلى مستشارنا الإعلاني فوراً.
                   </p>
                   <button
                     type="button"
                     onClick={() => setIsSubmitted(false)}
-                    className="px-5 py-2 rounded-full text-xs font-bold text-slate-300 bg-white/10 hover:bg-white/20 transition-colors"
+                    className="px-5 py-2 rounded-full text-xs font-bold text-slate-700 dark:text-slate-300 bg-slate-200/80 dark:bg-white/10 hover:bg-slate-300 dark:hover:bg-white/20 transition-colors"
                   >
                     إرسال طلب آخر
                   </button>
@@ -183,17 +183,17 @@ export const ContactSection: React.FC = () => {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 text-right">
                   <div className="mb-5">
-                    <h3 className="text-lg sm:text-xl font-bold text-white font-heading mb-1">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-heading mb-1">
                       احجز استشارتك التسويقية
                     </h3>
-                    <p className="text-xs text-slate-400">
+                    <p className="text-xs text-slate-500 dark:text-slate-400">
                       املأ البيانات وسيقوم فريقنا بالرد عليك بخطة عمل مخصصة.
                     </p>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 mb-1">
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                         الاسم الكريم *
                       </label>
                       <input
@@ -202,12 +202,12 @@ export const ContactSection: React.FC = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="مثال: أحمد العراقي"
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-cyanGlow-400 focus:ring-1 focus:ring-cyanGlow-400"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-white/[0.04] border border-slate-300/80 dark:border-white/15 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-electric-500 dark:focus:border-cyanGlow-400 focus:ring-1 focus:ring-electric-500 dark:focus:ring-cyanGlow-400"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 mb-1">
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                         رقم الجوال / واتساب *
                       </label>
                       <input
@@ -217,14 +217,14 @@ export const ContactSection: React.FC = () => {
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="077XXXXXXXX"
                         dir="ltr"
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-cyanGlow-400 focus:ring-1 focus:ring-cyanGlow-400 text-right"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-white/[0.04] border border-slate-300/80 dark:border-white/15 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-electric-500 dark:focus:border-cyanGlow-400 focus:ring-1 focus:ring-electric-500 dark:focus:ring-cyanGlow-400 text-right"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 mb-1">
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                         اسم الشركة أو النشاط التجاري
                       </label>
                       <input
@@ -232,18 +232,18 @@ export const ContactSection: React.FC = () => {
                         value={formData.brandName}
                         onChange={(e) => setFormData({ ...formData, brandName: e.target.value })}
                         placeholder="اسم متجرك أو علامتك"
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-cyanGlow-400 focus:ring-1 focus:ring-cyanGlow-400"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-white/[0.04] border border-slate-300/80 dark:border-white/15 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-electric-500 dark:focus:border-cyanGlow-400 focus:ring-1 focus:ring-electric-500 dark:focus:ring-cyanGlow-400"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-300 mb-1">
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                         الخدمة المطلوبة
                       </label>
                       <select
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-deep-900 border border-white/15 text-white text-xs sm:text-sm focus:outline-none focus:border-cyanGlow-400"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-deep-900 border border-slate-300/80 dark:border-white/15 text-slate-900 dark:text-white text-xs sm:text-sm focus:outline-none focus:border-electric-500 dark:focus:border-cyanGlow-400"
                       >
                         {SERVICES.map((s) => (
                           <option key={s.id} value={s.title}>
@@ -258,7 +258,7 @@ export const ContactSection: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-300 mb-1">
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                       تفاصيل إضافية عن أهدافك (اختياري)
                     </label>
                     <textarea
@@ -266,7 +266,7 @@ export const ContactSection: React.FC = () => {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="أخبرنا باختصار عن أهدافك التسويقية والميزانية التقريبية..."
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-cyanGlow-400 focus:ring-1 focus:ring-cyanGlow-400"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-white/[0.04] border border-slate-300/80 dark:border-white/15 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-electric-500 dark:focus:border-cyanGlow-400 focus:ring-1 focus:ring-electric-500 dark:focus:ring-cyanGlow-400"
                     />
                   </div>
 
@@ -278,9 +278,9 @@ export const ContactSection: React.FC = () => {
                     <span>إرسال الطلب عبر واتساب فوراً</span>
                   </button>
 
-                  <div className="flex items-center justify-center gap-4 text-[11px] text-slate-400 pt-1">
+                  <div className="flex items-center justify-center gap-4 text-[11px] text-slate-500 dark:text-slate-400 pt-1">
                     <span className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5 text-cyanGlow-400" />
+                      <Clock className="w-3.5 h-3.5 text-electric-600 dark:text-cyanGlow-400" />
                       رد سريع ومباشر 24/7
                     </span>
                     <span>•</span>

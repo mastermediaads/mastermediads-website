@@ -59,13 +59,13 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-xl overflow-y-auto animate-fadeIn">
-      <div className="liquid-glass-card rounded-3xl max-w-xl w-full p-6 sm:p-10 relative border border-white/20 shadow-2xl my-8">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 dark:bg-black/75 backdrop-blur-xl overflow-y-auto animate-fadeIn">
+      <div className="liquid-glass-card rounded-3xl max-w-xl w-full p-6 sm:p-10 relative border border-slate-200/80 dark:border-white/20 shadow-2xl my-8">
         
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 left-5 p-2 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+          className="absolute top-5 left-5 p-2 rounded-full text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white bg-slate-200/50 hover:bg-slate-200 dark:bg-transparent dark:hover:bg-white/10 transition-colors"
           aria-label="إغلاق"
         >
           <X className="w-5 h-5" />
@@ -73,14 +73,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
 
         {isSubmitted ? (
           <div className="text-center py-8 space-y-4">
-            <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-500 dark:text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto mb-4">
               <CheckCircle2 className="w-10 h-10" />
             </div>
-            <h3 className="text-2xl font-bold text-white font-heading">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white font-heading">
               تم استلام طلبك بنجاح!
             </h3>
-            <p className="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
-              شكرًا لتواصلك مع <strong className="text-white">ماستر ميديا للترويج والإعلان</strong>. جاري نقلك لمحادثة الواتساب للمتابعة المباشرة.
+            <p className="text-slate-600 dark:text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
+              شكرًا لتواصلك مع <strong className="text-slate-900 dark:text-white">ماستر ميديا للترويج والإعلان</strong>. جاري نقلك لمحادثة الواتساب للمتابعة المباشرة.
             </p>
             <div className="pt-4">
               <button
@@ -95,14 +95,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
           <div>
             {/* Modal Header */}
             <div className="text-right mb-6">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-cyanGlow-300 text-xs font-bold mb-2">
-                <Sparkles className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200/60 dark:bg-white/5 border border-slate-300/80 dark:border-white/10 text-electric-700 dark:text-cyanGlow-300 text-xs font-bold mb-2">
+                <Sparkles className="w-3.5 h-3.5 text-electric-600 dark:text-cyanGlow-400" />
                 <span>طلب استشارة تسويقية</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-black text-white font-heading">
+              <h3 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white font-heading">
                 ابدأ مشروعك مع ماستر ميديا
               </h3>
-              <p className="text-slate-300 text-xs sm:text-sm mt-1">
+              <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-1">
                 املأ النموذج وسنقوم بإعداد خطة مبدئية تناسب أهدافك.
               </p>
             </div>
@@ -111,7 +111,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
             <form onSubmit={handleSubmit} className="space-y-4 text-right">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">
                     الاسم الكريم *
                   </label>
                   <input
@@ -120,12 +120,12 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="مثال: أحمد محمد"
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyanGlow-400"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-white/[0.04] border border-slate-300/80 dark:border-white/15 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-electric-500 dark:focus:border-cyanGlow-400"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">
                     رقم الجوال / واتساب *
                   </label>
                   <input
@@ -135,14 +135,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="077XXXXXXXX"
                     dir="ltr"
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyanGlow-400 text-right"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-white/[0.04] border border-slate-300/80 dark:border-white/15 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-electric-500 dark:focus:border-cyanGlow-400 text-right"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">
                     اسم الشركة أو المتجر
                   </label>
                   <input
@@ -150,18 +150,18 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
                     value={formData.brandName}
                     onChange={(e) => setFormData({ ...formData, brandName: e.target.value })}
                     placeholder="اسم مشروعك"
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyanGlow-400"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-white/[0.04] border border-slate-300/80 dark:border-white/15 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-electric-500 dark:focus:border-cyanGlow-400"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">
                     الخدمة المطلوبة
                   </label>
                   <select
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-deep-900 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow-400"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-deep-900 border border-slate-300/80 dark:border-white/15 text-slate-900 dark:text-white text-sm focus:outline-none focus:border-electric-500 dark:focus:border-cyanGlow-400"
                   >
                     {SERVICES.map((s) => (
                       <option key={s.id} value={s.title}>
@@ -176,7 +176,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-300 mb-1.5">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">
                   تفاصيل إضافية (اختياري)
                 </label>
                 <textarea
@@ -184,7 +184,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
                   value={formData.details}
                   onChange={(e) => setFormData({ ...formData, details: e.target.value })}
                   placeholder="أخبرنا باختصار عن أهدافك وميزانيتك..."
-                  className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyanGlow-400"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-white/[0.04] border border-slate-300/80 dark:border-white/15 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-electric-500 dark:focus:border-cyanGlow-400"
                 />
               </div>
 
@@ -198,9 +198,9 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
                 </button>
               </div>
 
-              <div className="flex items-center justify-center gap-4 text-[11px] text-slate-400 pt-2">
+              <div className="flex items-center justify-center gap-4 text-[11px] text-slate-500 dark:text-slate-400 pt-2">
                 <span className="flex items-center gap-1">
-                  <Clock className="w-3.5 h-3.5 text-cyanGlow-400" />
+                  <Clock className="w-3.5 h-3.5 text-electric-600 dark:text-cyanGlow-400" />
                   مستشارنا متاح 24/7
                 </span>
                 <span>•</span>
